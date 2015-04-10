@@ -20,6 +20,7 @@ RSRT is a Drupal 7 that has been architected to display information about Servic
 3. A service has Qualification Questions, also known as Tier 2 Questions. If a Service has specific requirements on a user before they can be eligible for a service, the qualification questions will reflect that. For example, some services are only for non-English speakers, so the person creating the service would choose "Must not speak English". Then when a user searches for that service, they would not check the "I speak English" box on the search page.
 4. A Service also has a Checklist, showing a list of items (usually documents) a user must bring with them if applying at a Brick and Mortar location. Things like a Driver's license, proof of residence, a Green Card, etc.
 5. See Counties, Providers, Applications, Service Types and Reach for more functionality around services, as well as Basket and Ignored Services flags.
+6. When you publish a service, a Rule is activated that makes sure the associated Provider and Application nodes are also published.
 
 ----
 ## Providers (node type, group content)
@@ -135,7 +136,7 @@ You need this if Services don't get published right away, and you want people to
 
 ---
 ## Rules
-Allows you to script business rules (like Statewide Services, email notifications) without writing code. Can also be enabled/disabled by non-programmers. Might still be some Rules from the Drupal 6 site that need to get copied over.
+Allows you to script business rules (like Statewide Services, email notifications) without writing code. Can also be enabled/disabled by non-programmers. Might still be some Rules from the Drupal 6 site that need to get copied over. CHeck with Josh Fox to see if he still wants all of the emails notifications from the old site.
 
 ---
 ## Search Configuration
