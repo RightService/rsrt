@@ -1,0 +1,84 @@
+uuid: dd9cf9a1-198c-478f-93e9-5bcea1247ef3
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.service_type
+    - views.view.child_terms_term_
+    - views.view.service_type
+    - views.view.term_summary
+  module:
+    - panels
+    - views
+id: service_type-panels_variant-0
+label: 'Service type'
+weight: 0
+variant: panels_variant
+variant_settings:
+  id: panels_variant
+  label: null
+  weight: 0
+  uuid: f76dff38-328f-406b-88ff-ceb771818e5a
+  blocks:
+    b4a7f707-21e9-4c7b-93e4-2bb45eed50ad:
+      id: 'views_block:child_terms_term_-panel_pane_1'
+      label: ''
+      label_display: '0'
+      provider: views
+      context_mapping:
+        parent_target_id: service_parent
+      views_label: ''
+      items_per_page: none
+      region: content
+      weight: 0
+      uuid: b4a7f707-21e9-4c7b-93e4-2bb45eed50ad
+    a98ca336-5ae0-482d-b8d9-62889ced9078:
+      id: 'views_block:term_summary-block_1'
+      label: ''
+      label_display: '0'
+      provider: views
+      context_mapping:
+        tid: service
+      views_label: ''
+      items_per_page: none
+      region: content
+      weight: -1
+      uuid: a98ca336-5ae0-482d-b8d9-62889ced9078
+    010956c6-93bd-4e25-aa0f-49bbc0aaa885:
+      id: 'views_block:service_type-block_1'
+      label: ''
+      label_display: '0'
+      provider: views
+      context_mapping:
+        term_node_tid_depth: service
+        field_counties_target_id: county
+      views_label: ''
+      items_per_page: none
+      region: content
+      weight: 1
+      uuid: 010956c6-93bd-4e25-aa0f-49bbc0aaa885
+  page_title: ''
+  layout: layout_onecol
+  layout_settings: {  }
+  builder: standard
+  storage_type: page_manager
+  storage_id: service_type-panels_variant-0
+page: service_type
+selection_criteria: {  }
+selection_logic: and
+static_context:
+  service:
+    label: Service
+    type: 'entity:taxonomy_term'
+    description: ''
+    value: 01afca94-65ad-4711-958a-05db67bfc48f
+  service_parent:
+    label: 'Service parent'
+    type: 'entity:taxonomy_term'
+    description: ''
+    value: 01afca94-65ad-4711-958a-05db67bfc48f
+  county:
+    label: County
+    type: 'entity:taxonomy_term'
+    description: ''
+    value: 82411046-8658-4edc-8414-7991281eee62

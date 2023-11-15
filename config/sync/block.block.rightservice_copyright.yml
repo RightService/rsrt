@@ -1,0 +1,25 @@
+uuid: 732a9516-c1b8-4dac-ad9e-ebd9041c5f5d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d347c649-843d-4571-a4cd-be78e809e5a6'
+  module:
+    - block_content
+  theme:
+    - rightservice
+id: rightservice_copyright
+theme: rightservice
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:d347c649-843d-4571-a4cd-be78e809e5a6'
+settings:
+  id: 'block_content:d347c649-843d-4571-a4cd-be78e809e5a6'
+  label: Copyright
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

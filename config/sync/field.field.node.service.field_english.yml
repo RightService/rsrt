@@ -1,0 +1,21 @@
+uuid: c88b6385-0b69-4fc8-9683-5aea936b5d6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_english
+    - node.type.service
+  module:
+    - options
+id: node.service.field_english
+field_name: field_english
+entity_type: node
+bundle: service
+label: English
+description: 'Further requirement or condition of service.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

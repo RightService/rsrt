@@ -1,0 +1,154 @@
+<?php
+
+use Drupal\block\Entity\Block;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\matomo\Component\Render\MatomoJavaScriptSnippet;
+use Drupal\node\Entity\Node;
+// use Symfony\Cmf\Component\Routing\RouteObjectInterface;
+use Drupal\Core\Routing\RouteObjectInterface;
+
+const MATOMO_SCRIPT_NAME = 'matomo_tracking_script';
+
+function rightservice_preprocess_block(&$variables) {
+  // add 'region' variable to the block template
+  if (!empty($variables['elements']['#id'])) {
+    $block = Block::load($variables['elements']['#id']);
+    if ($block !== NULL) {
+      $variables['region'] = $block->getRegion();
+    }
+  }
+
+  //add page_title variable to a block template
+  if (!array_key_exists('page_title', $variables) || empty($variables['page_title'])) {
+    $request = Drupal::request();
+    if ($route = $request->attributes->get(RouteObjectInterface::ROUTE_OBJECT)) {
+      $title = Drupal::service('title_resolver')->getTitle($request, $route);
+      if ($title && is_object($title)) {
+        $variables['page_title'] = $title->__toString();
+      }
+    }
+  }
+}
+
+function rightservice_preprocess_page(&$variables) {
+  $search_block = Block::load('exposedformsearchpage_1');
+  if ($search_block !== NULL) {
+    $variables['searchform'] = Drupal::entityTypeManager()
+      ->getViewBuilder('block')
+      ->view($search_block);
+  }
+}
+
+function rightservice_page_attachments_alter(array &$attachments) { //fix for service node view counter
+  $path = Drupal::service('path.current')->getPath();
+  if (preg_match('/node\/(\d+)/', $path, $matches)) {
+    $node = Node::load($matches[1]);
+    if ($node && $node->getType() === 'service') {
+      $display = Drupal::service('entity_display.repository')
+        ->getViewDisplay('node', 'service');
+
+      Drupal::moduleHandler()
+        ->invoke('statistics', 'node_view', $args = [
+          &$attachments,
+          $node,
+          $display,
+          'full',
+        ]);
+    }
+  }
+
+  foreach ($attachments['#attached']['html_head'] as &$attachment) {
+    if ($attachment[1] === MATOMO_SCRIPT_NAME) {
+      $node = Drupal::routeMatch()->getParameter('node');
+      $types = ['node' => $node];
+      $tokenScript = $attachment[0]['#value']->jsonSerialize();
+      $matomoScript = Drupal::token()
+        ->replace($tokenScript, $types, ['clear' => TRUE]);
+      $attachment[0]['#value'] = new MatomoJavaScriptSnippet($matomoScript);
+    }
+  }
+  $attachments['#attached']['drupalSettings']['gaId'] = getenv('GA_ID');
+  $attachments['#attached']['drupalSettings']['gaMeasurementId'] = getenv('GA_MEASUREMENT_ID');
+}
+
+function rightservice_form_search_block_form_alter(&$form, FormStateInterface $form_state) {
+  $form['keys']['#attributes']['title'] = t('I am looking for...');
+  $form['keys']['#attributes']['placeholder'] = t('I am looking for...');
+}
+
+function rightservice_preprocess_views_view_field(&$variables) { //overrides links on Service Types page
+  try {
+    $view = $variables['view'];
+    $fields = ['field_icon', 'name', 'description__value']; //at these fields
+
+    if (
+      !empty($variables['output']
+        && in_array($variables['field']->field, $fields, TRUE))
+      && ($view->storage->label() === 'Service Types' || $view->storage->label() === 'Term Page') //in both parent and child templates
+    ) {
+      $alias = '';
+      $tid = $variables['row']->_entity->get('tid')
+        ->getValue()[0]['value'];
+      $pathStorage = Drupal::entityTypeManager()
+        ->getStorage('path_alias')
+        ->loadByProperties(['path' => '/taxonomy/term/' . $tid]);
+
+      if (!empty($pathStorage)) {
+        foreach ($pathStorage as $a) {
+          if (strpos($a->getAlias(), '/services/') !== FALSE) { //get the only one containing /services/
+            $alias = $a->getAlias();
+            break;
+          }
+        }
+      }
+
+      if ($alias) { //override only if alias is avaiable
+        $county = Drupal::service('default_county')->getCounty();
+        $pattern = '/(<a[^>]*href=")[^"]*("[^>]*>)/m';
+        $replacement = '$1/service-type/' . $county . $alias . '$2';
+        $new = preg_replace($pattern, $replacement, $variables['output']->__toString());
+        $variables['output'] = $variables['output']->create($new);
+      }
+    }
+  } catch (Exception $e) {
+    Drupal::logger('exception')->error($e->getMessage());
+  }
+}
+
+function rightservice_preprocess_views_view(&$variables) {
+  if ($variables['view']->storage->label() === 'Service Types') {
+    $county = $variables['view']->args[0];
+    try {
+      $terms = Drupal::entityTypeManager()
+        ->getStorage('taxonomy_term')
+        ->loadByProperties(['name' => $county]);
+    } catch (Exception $e) {
+      Drupal::logger('exception')->error($e->getMessage());
+    }
+    $term = reset($terms);
+
+    $variables['header']['area']['#text'] = '<p><a href="/browse/services/' .
+      strtolower($term ? $term->getName() : $county) .
+      '" id="county_link" >View all Services</a></p>';
+  }
+}
+
+function rightservice_preprocess_breadcrumb(&$variables) {
+  if ($variables['breadcrumb'][1]['url'] === '/service-type') {
+    unset($variables['breadcrumb'][1]);
+  }
+  foreach ($variables['breadcrumb'] as $key => &$crumb) {
+    if ($key === 3 && preg_match('/^(.*)\/services$/', $variables['breadcrumb'][3]['url'])) {
+      $variables['breadcrumb'][3]['url'] = str_replace('/services', '', $variables['breadcrumb'][3]['url']);
+    }
+    if ($key !== 4) {
+      $crumb['url'] = str_replace('service-type', 'servicetypes', $crumb['url']);
+    }
+  }
+}
+
+// change placeholders for user login form
+function rightservice_form_user_login_form_alter(&$form, $form_state) {
+  $form['name']['#title'] = t('Username *');
+  $form['pass']['#title'] = t('Password *');
+}

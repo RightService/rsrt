@@ -1,0 +1,5 @@
+services:
+  county_redirect_module_event_subscriber:
+    class: Drupal\county_redirect\EventSubscriber\CountyRedirect
+    tags:
+      - {name: event_subscriber}

@@ -1,0 +1,19 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: 'Thiết lập lại'
+      fields:
+        type:
+          label: Type
+        message:
+          label: 'Thông điệp'
+        link:
+          label: 'Thao tác'
+      filters:
+        type:
+          expose:
+            label: Type
+  page:
+    display_title: Trang

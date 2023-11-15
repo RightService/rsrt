@@ -1,0 +1,8 @@
+uuid: 3d5fb025-06aa-40e8-bc40-e5d2d65caf03
+langcode: en
+status: true
+dependencies: {  }
+id: rsrt-menu
+label: 'RSRT menu'
+description: ''
+locked: false

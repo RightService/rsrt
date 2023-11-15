@@ -1,0 +1,8 @@
+county_node_routing.content:
+  path: '/county/{county}/node/{node}' 
+  defaults:
+    _controller: '\Drupal\county_node_routing\Controller\NodeController::view' 
+    _title_callback: '\Drupal\node\Controller\NodeViewController::title'
+  requirements:
+    node: '\d+'
+    _entity_access: 'node.view' 

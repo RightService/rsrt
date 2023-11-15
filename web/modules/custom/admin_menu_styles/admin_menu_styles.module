@@ -1,0 +1,16 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+function admin_menu_styles_element_info_alter(array &$types) {
+  if (isset($types['toolbar_item'])) {
+    $types['toolbar_item']['#attached']['library'][] = 'admin_menu_styles/admin-toolbar';
+  }
+}
+
+/**
+ * Implements hook_preprocess_form().
+ */
+function admin_menu_styles_preprocess_node_edit_form(&$variables) {
+  $variables['form']['#attached']['library'][] = 'admin_menu_styles/admin-edit-page';
+}

@@ -1,0 +1,25 @@
+uuid: 38d7013e-6705-4bfb-9be3-478c8ec9d7d2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:13de56a4-9129-48dd-8727-94a995f0750b'
+  module:
+    - block_content
+  theme:
+    - rightservice
+id: rightservice_rightservice_block_6
+theme: rightservice
+region: content
+weight: -8
+provider: null
+plugin: 'block_content:13de56a4-9129-48dd-8727-94a995f0750b'
+settings:
+  id: 'block_content:13de56a4-9129-48dd-8727-94a995f0750b'
+  label: ''
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

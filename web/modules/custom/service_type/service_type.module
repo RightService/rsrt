@@ -1,0 +1,46 @@
+<?php
+
+use Drupal\views\ViewExecutable;
+use Drupal\Core\Form\FormState;
+use Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException;
+use Drupal\Component\Plugin\Exception\PluginNotFoundException;
+
+/**
+ * Replaces default county value for the exposed filter.
+ *
+ * @param array                      $form
+ * @param Drupal\Core\Form\FormState $form_state
+ * @param string                     $form_id
+ *
+ * @throws InvalidPluginDefinitionException
+ * @throws PluginNotFoundException
+ */
+function service_type_form_alter(array &$form, FormState &$form_state, string $form_id) {
+  if ($form['#id'] === 'views-exposed-form-service-type-block-1' && !array_key_exists('_drupal_ajax', $_REQUEST)) {
+    $county = Drupal::service('default_county')->getCounty();
+    if ($county !== 'all') {
+      $terms                         = Drupal::entityTypeManager()
+                                             ->getStorage('taxonomy_term')
+                                             ->loadByProperties(['name' => $county]);
+      $term                          = reset($terms);
+      $form['tid']['#default_value'] = $term->id();
+      $form_state->setUserInput(['tid' => $term->id()]);
+    }
+  }
+}
+
+/**
+ * Replaces county view argument to 'all' in order to not interfere with county
+ * filter.
+ *
+ * It is needed because those filters are combined with 'AND'.
+ *
+ * @param Drupal\views\ViewExecutable $view
+ * @param string                      $display_id
+ * @param array                       $args
+ */
+function service_type_views_pre_view(ViewExecutable $view, string $display_id, array &$args) {
+  if (array_key_exists('_drupal_ajax', $_REQUEST)) {
+    $args[1] = 'all';
+  }
+}

@@ -1,0 +1,20 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Restablecer
+      fields:
+        filename:
+          label: Nombre
+        status:
+          label: Status
+      filters:
+        status:
+          expose:
+            label: Status
+  page_2:
+    display_options:
+      fields:
+        type:
+          label: 'Tipo de entidad'

@@ -1,0 +1,21 @@
+uuid: 582c6aec-d0fd-4aee-af16-700c659e34c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_stateidentification
+    - node.type.service
+  module:
+    - options
+id: node.service.field_stateidentification
+field_name: field_stateidentification
+entity_type: node
+bundle: service
+label: "Driver's license or state ID"
+description: 'Further requirement of condition of service.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

@@ -1,0 +1,28 @@
+uuid: e2e7644d-23cc-40a9-8252-a51da66e02d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.provider
+  module:
+    - linkchecker
+    - text
+third_party_settings:
+  linkchecker:
+    scan: true
+    extractor: html_link_extractor
+id: node.provider.body
+field_name: body
+entity_type: node
+bundle: provider
+label: 'Summary of Services Provided'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

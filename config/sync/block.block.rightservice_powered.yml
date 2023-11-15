@@ -1,0 +1,22 @@
+uuid: afb12b58-f42b-429c-a780-b40298970fc1
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - rightservice
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: rightservice_powered
+theme: rightservice
+region: content
+weight: 1
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

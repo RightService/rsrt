@@ -1,0 +1,36 @@
+uuid: 592ea8c5-74b4-45a0-a264-f0bcde6abdb2
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_contacttitle
+field_name: field_contacttitle
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Miss
+      label: Miss
+    -
+      value: Ms.
+      label: Ms.
+    -
+      value: Mrs.
+      label: Mrs.
+    -
+      value: Mr.
+      label: Mr.
+    -
+      value: Dr.
+      label: Dr.
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

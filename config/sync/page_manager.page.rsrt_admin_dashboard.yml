@@ -1,0 +1,21 @@
+uuid: 40c47922-e9a1-4e23-b5b4-8a0421e78776
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: rsrt_admin_dashboard
+label: 'RSRT Admin Dashboard'
+description: ''
+use_admin_theme: true
+path: /admin/reports/rsrt
+access_logic: and
+access_conditions:
+  -
+    id: user_role
+    negate: false
+    context_mapping:
+      user: current_user
+    roles:
+      administrator: administrator
+parameters: {  }

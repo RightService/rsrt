@@ -1,0 +1,7 @@
+## YAML Template.
+---
+name: Profile Reg Path
+type: module
+description: 'Generate Registration path for profile'
+package: Other
+core_version_requirement: ^8 || ^9 || ^10

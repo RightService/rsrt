@@ -1,0 +1,21 @@
+uuid: aa429f43-f2c8-49c3-931a-ddeb32851ee4
+langcode: und
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_profile_zipcode
+field_name: field_profile_zipcode
+entity_type: user
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

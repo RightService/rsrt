@@ -1,0 +1,16 @@
+multiple_registration_pages_white_list:
+  provider: provider
+  anonymous: 0
+  authenticated: 0
+  content_editor: 0
+  administrator: 0
+  library: 0
+  temporary: 0
+multiple_registration_pages_allowed_list:
+  provider: provider
+  anonymous: 0
+  authenticated: 0
+  content_editor: 0
+  administrator: 0
+  library: 0
+  temporary: 0

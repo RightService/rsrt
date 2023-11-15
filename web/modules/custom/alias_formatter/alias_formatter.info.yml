@@ -1,0 +1,7 @@
+name: Alias formatter
+type: module
+description: 'Replaces links with their defined aliases'
+core_version_requirement: ^9 || ^10
+dependencies:
+  - field
+  - default_county:default_county

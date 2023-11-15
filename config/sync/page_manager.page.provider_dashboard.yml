@@ -1,0 +1,22 @@
+uuid: 5d5ce5bf-3f8d-4920-aaf8-52b5cf7d7012
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: provider_dashboard
+label: 'Provider Dashboard'
+description: ''
+use_admin_theme: false
+path: /provider/dashboard
+access_logic: and
+access_conditions:
+  -
+    id: user_role
+    negate: false
+    context_mapping:
+      user: current_user
+    roles:
+      provider: provider
+      administrator: administrator
+parameters: {  }

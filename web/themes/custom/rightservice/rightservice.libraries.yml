@@ -1,0 +1,31 @@
+global-styling:
+  version: 1.1
+  css:
+    theme:
+      css/global.base.css: {}
+      css/global.styles.css: {}
+      css/lt-ie9.css: {}
+      css/responsive.custom.css: {}
+      css/responsive.desktop.css: {}
+      css/responsive.smartphone.landscape.css: {}
+      css/responsive.smartphone.portrait.css: {}
+      css/responsive.tablet.landscape.css: {}
+      css/responsive.tablet.portrait.css: {}
+      css/additional.styles.css: {}
+header-scripts:
+  verion: 1.x
+  header: true
+  js:
+    js/user1st.js:
+      attributes:
+        id: User1st_Loader
+global-scripts:
+  version: 2.2
+  js:
+    js/jquery.colorbox-min.js: {}
+    js/highmaps.js: {}
+    js/exporting.js: {}
+    js/us-fl-all.js: {}
+    js/rightservice.js: {}
+  dependencies:
+    - core/drupalSettings

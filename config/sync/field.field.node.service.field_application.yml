@@ -1,0 +1,39 @@
+uuid: e544263d-6e30-48f7-800d-e0f6761a8a15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_application
+    - node.type.application
+    - node.type.service
+  module:
+    - entityconnect
+third_party_settings:
+  entityconnect:
+    buttons:
+      button_add: 0
+      button_edit: 0
+    icons:
+      icon_add: 0
+      icon_edit: 0
+id: node.service.field_application
+field_name: field_application
+entity_type: node
+bundle: service
+label: Application
+description: 'The "Application" URL or Document for this service. <strong>Add new:</strong> click the "+" button. <strong>Edit the linked Application:</strong> click the pencil. <strong>Select an existing Application:</strong> begin typing the provider''s name in the text field. By editing an Application, you may update several services at once.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      application: application
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

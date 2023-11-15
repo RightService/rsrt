@@ -1,0 +1,44 @@
+diff --git src/LinkExtractorBatch.php src/LinkExtractorBatch.php
+index 92c3807..27daddc 100644
+--- src/LinkExtractorBatch.php
++++ src/LinkExtractorBatch.php
+@@ -101,12 +101,21 @@ class LinkExtractorBatch {
+ 
+       $query = $this->database->select($entityType->getBaseTable(), 'base');
+       $query->fields('base', [$entityType->getKey('id')]);
++      $query->join(
++        $entityType->getBaseTable() . '_field_data',
++        'fd',
++        'fd.' . $entityType->getKey('id') . ' = base.' . $entityType->getKey('id') . ' AND fd.' . $entityType->getKey('bundle') . ' = :node_type',
++        [
++          ':node_type' => $bundle,
++        ]
++      );
+       $query->leftJoin('linkchecker_index', 'i', 'i.entity_id = base.' . $entityType->getKey('id') . ' AND i.entity_type = :entity_type', [
+         ':entity_type' => $entityType->id(),
+       ]);
+       $query->isNull('i.entity_id');
+       if (!empty($bundle)) {
+         $query->condition('base.' . $entityType->getKey('bundle'), $bundle);
++        $query->condition('fd.' . $entityType->getKey('status'), '1');
+       }
+       $query->range(0, $numberOfItems - $numberOfProcessedItems);
+ 
+@@ -150,8 +159,17 @@ class LinkExtractorBatch {
+       // on linkchecker_index table.
+       $query = $this->database->select($entityType->getBaseTable(), 'base');
+       $query->fields('base', [$entityType->getKey('id')]);
++      $query->join(
++        $entityType->getBaseTable() . '_field_data',
++        'fd',
++        'fd.' . $entityType->getKey('id') . ' = base.' . $entityType->getKey('id') . ' AND fd.' . $entityType->getKey('bundle') . ' = :node_type',
++        [
++          ':node_type' => $bundle,
++        ]
++      );
+       if (!empty($bundle)) {
+         $query->condition('base.' . $entityType->getKey('bundle'), $bundle);
++        $query->condition('fd.' . $entityType->getKey('status'), '1');
+       }
+ 
+       $query = $query->countQuery();

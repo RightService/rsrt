@@ -1,0 +1,27 @@
+uuid: fedf9af6-1d40-4aac-abd5-bde5a89df560
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_files
+    - node.type.helppage
+  module:
+    - file
+id: node.helppage.field_files
+field_name: field_files
+entity_type: node
+bundle: helppage
+label: 'Support files'
+description: 'Attach any necessary support files. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'txt doc png jpg gif zip odt xls ods csv pdf swf ai psd avi wma mpeg'
+  max_filesize: 500MB
+  description_field: true
+field_type: file
