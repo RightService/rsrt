@@ -1,0 +1,5 @@
+name: Cache fix module
+description: 'Fix view counters, disable user profile caching'
+type: module
+core_version_requirement: ^9 || ^10
+package: Fix

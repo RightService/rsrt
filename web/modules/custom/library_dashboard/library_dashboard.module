@@ -1,0 +1,68 @@
+<?php
+
+use Drupal\taxonomy\Entity\Term;
+use Drupal\views\ViewExecutable;
+
+// replaces default exposed county filter values with user-assigned counites
+function library_dashboard_form_views_exposed_form_alter(&$form, &$form_state) {
+  $views = [
+    "/recently-updated-providers-and-services",
+    "/new-provider-profiles",
+    "/new-services",
+    "/new-county-users",
+  ];
+  if (in_array($form["#action"], $views, TRUE)) {
+    $current_user = Drupal::currentUser();
+    $roles        = $current_user->getRoles();
+    if (in_array('administrator', $roles, TRUE)) {
+      $vid   = 'county';
+      $terms = Drupal::entityTypeManager()
+                     ->getStorage('taxonomy_term')
+                     ->loadTree($vid);
+      foreach ($terms as $term) {
+        $form["field_counties_target_id"]["#options"][(int) $term->tid] = ucfirst($term->name);
+      }
+      $input = $form_state->getUserInput();
+      if (is_int($input['field_counties_target_id'])) {
+        $input['field_counties_target_id'] = 'All';
+        $form_state->setUserInput($input);
+      }
+    }
+    else {
+      $county_list = Drupal::service('default_county')->getUserCountyList();
+      unset($form["field_counties_target_id"]["#options"]);
+      foreach ($county_list as $county) {
+        $term                                                        = Term::load($county);
+        $name                                                        = strtolower($term->getName());
+        $form["field_counties_target_id"]["#options"][(int) $county] = ucfirst($name);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_views_pre_view().
+ *
+ * @param ViewExecutable $view
+ */
+function library_dashboard_views_pre_view(ViewExecutable $view) {
+  $views        = [
+    "recently_updated_providers_and_services",
+    "new_provider_profiles",
+    "new_services",
+    "new_county_users",
+  ];
+  $view_id      = $view->id();
+  $current_user = Drupal::currentUser();
+  $roles        = $current_user->getRoles();
+  if (in_array($view_id, $views, TRUE) && !in_array('administrator', $roles, TRUE)) {
+    $county_list                                     = Drupal::service('default_county')
+                                                             ->getUserCountyList();
+    $view->filter['field_counties_target_id'] = $county_list;
+    $target_id = $view->getRequest()->request->get('field_counties_target_id') ?: reset($county_list);
+    $view->setExposedInput([
+      'keys' => $view->getRequest()->request->get('keys'),
+      'field_counties_target_id' => $target_id,
+    ]);
+  }
+}

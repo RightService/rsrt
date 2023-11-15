@@ -1,0 +1,8 @@
+uuid: 48a74dde-f22d-4752-bb10-50e1c5111f88
+langcode: en
+status: true
+dependencies: {  }
+name: 'Service Type'
+vid: service_type
+description: 'These are the Tier 1 Categories.'
+weight: 0

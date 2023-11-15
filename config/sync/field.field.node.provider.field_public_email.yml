@@ -1,0 +1,19 @@
+uuid: 199d8572-f38b-46ba-829a-fecf5bfefe30
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_public_email
+    - node.type.provider
+id: node.provider.field_public_email
+field_name: field_public_email
+entity_type: node
+bundle: provider
+label: 'Public Email'
+description: 'OPTIONAL: This email will be displayed openly on the RightServiceFL.org website. This email is intended for applicant users to contact your service with questions. '
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

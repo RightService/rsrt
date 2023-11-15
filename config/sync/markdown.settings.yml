@@ -1,0 +1,4 @@
+_core:
+  default_config_hash: BGlnbueWmcxablTviSA1SF0-yNvbNkUjnvYMMFuUl24
+default_parser: php-markdown-extra
+markdown_library: php-markdown

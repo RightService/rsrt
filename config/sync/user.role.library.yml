@@ -1,0 +1,63 @@
+uuid: 1af10586-537f-4aff-976e-b7b11b2fc42d
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.filtered_html
+    - filter.format.markdown
+    - node.type.application
+    - node.type.helppage
+    - node.type.provider
+    - node.type.service
+  module:
+    - contextual
+    - entityconnect
+    - environment_indicator
+    - file
+    - filter
+    - node
+    - publishcontent
+    - shortcut
+    - statistics
+    - system
+    - toolbar
+    - toolbar_menu
+    - view_unpublished
+id: library
+label: library
+weight: 37
+is_admin: null
+permissions:
+  - 'access contextual links'
+  - 'access environment indicator'
+  - 'access shortcuts'
+  - 'access toolbar'
+  - 'create application content'
+  - 'create helppage content'
+  - 'create provider content'
+  - 'create service content'
+  - 'delete own application content'
+  - 'delete own files'
+  - 'delete own helppage content'
+  - 'delete own provider content'
+  - 'delete own service content'
+  - 'edit any application content'
+  - 'edit any provider content'
+  - 'edit any service content'
+  - 'edit own application content'
+  - 'edit own helppage content'
+  - 'edit own provider content'
+  - 'edit own service content'
+  - 'entityconnect add button'
+  - 'entityconnect edit button'
+  - 'publish editable content'
+  - 'unpublish editable content'
+  - 'use text format filtered_html'
+  - 'use text format markdown'
+  - 'view any unpublished application content'
+  - 'view any unpublished provider content'
+  - 'view any unpublished service content'
+  - 'view own unpublished content'
+  - 'view post access counter'
+  - 'view rsrt in toolbar'
+  - 'view the administration theme'

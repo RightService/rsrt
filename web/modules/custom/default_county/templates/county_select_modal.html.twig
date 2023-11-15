@@ -1,0 +1,13 @@
+<div class="form--inline clearfix default-county-select-modal">
+    <div class="js-form-item form-item js-form-type-select form-type-select js-form-item-tid form-item-tid">
+        <label for="edit-tid">County</label>
+        <select id="edit-tid" class="form-select">
+            {% for option in options %}
+                <option value="{{ option.tid }}">{{ option.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="form-actions js-form-wrapper form-wrapper" id="edit-actions">
+    <input type="submit" class="button js-form-submit form-submit" onclick="selectDefaultCounty();">
+    </div>
+</div>

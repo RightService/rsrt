@@ -1,0 +1,27 @@
+label: Contenido
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Restablecer
+      fields:
+        status:
+          label: Status
+        operations:
+          label: Operaciones
+      filters:
+        status:
+          expose:
+            label: Status
+        langcode:
+          expose:
+            label: Idioma
+      title: Contenido
+  page_1:
+    display_options:
+      menu:
+        title: Contenido
+      tab_options:
+        title: Contenido
+    display_title: Página

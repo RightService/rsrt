@@ -1,0 +1,14 @@
+uuid: 000272c6-7107-4154-9f17-7862c0d1dd24
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.provider
+  module:
+    - user
+id: user_remove_role_action.provider
+label: 'Remove the provider role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: provider

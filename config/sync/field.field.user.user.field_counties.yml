@@ -1,0 +1,39 @@
+uuid: c6b7a87c-708b-488e-a979-4f4141b2a04d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_counties
+    - taxonomy.vocabulary.county
+  module:
+    - entityconnect
+    - user
+third_party_settings:
+  entityconnect:
+    buttons:
+      button_add: 1
+      button_edit: 1
+    icons:
+      icon_add: 0
+      icon_edit: 0
+id: user.user.field_counties
+field_name: field_counties
+entity_type: user
+bundle: user
+label: Counties
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      county: county
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

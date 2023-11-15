@@ -1,0 +1,10 @@
+uuid: 8307a952-d995-4a71-b9fa-22c866a29703
+langcode: en
+status: true
+dependencies:
+  module:
+    - filebrowser
+id: filebrowser_metadata_entity.token
+label: Token
+targetEntityType: filebrowser_metadata_entity
+cache: true

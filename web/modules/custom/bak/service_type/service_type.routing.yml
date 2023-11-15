@@ -1,0 +1,8 @@
+service_type.content:
+  path: '/service-type/{county}/{taxonomy}/{term}/{child}' 
+  defaults: 
+    _controller: '\Drupal\service_type\Controller\ServiceTypeController::content' 
+    _title: 'Service Type'
+    child: ''
+  requirements: 
+    _permission: 'access content' 

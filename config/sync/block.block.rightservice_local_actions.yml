@@ -1,0 +1,20 @@
+uuid: 7cb278f7-428b-47a3-b77d-91d5d099a704
+langcode: en
+status: true
+dependencies:
+  theme:
+    - rightservice
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: rightservice_local_actions
+theme: rightservice
+region: content
+weight: -9
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

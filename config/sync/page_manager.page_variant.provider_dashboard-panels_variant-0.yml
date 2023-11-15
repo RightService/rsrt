@@ -1,0 +1,92 @@
+uuid: 7cafc5fb-d8cf-48d4-a387-500649024180
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.provider_dashboard
+    - views.view.assets
+    - views.view.getting_started_provider
+    - views.view.provider_services
+    - views.view.tutorials
+  content:
+    - 'block_content:basic:c61ceb47-b11f-4e7d-b119-077030f496d5'
+  module:
+    - block_content
+    - panels
+    - views
+id: provider_dashboard-panels_variant-0
+label: Panels
+weight: 0
+variant: panels_variant
+variant_settings:
+  id: panels_variant
+  label: null
+  weight: 0
+  uuid: 73d6c839-5e40-416e-b1a8-658125f3be85
+  blocks:
+    3be11c9a-60ee-4a98-99d4-bf0364a47978:
+      id: 'views_block:getting_started_provider-block_1'
+      label: 'Getting Started'
+      label_display: visible
+      provider: views
+      context_mapping: {  }
+      views_label: 'Getting Started'
+      items_per_page: none
+      region: first
+      weight: -1
+      uuid: 3be11c9a-60ee-4a98-99d4-bf0364a47978
+    ac9440bb-7606-4f3f-90e7-e42f66b2166d:
+      id: 'views_block:tutorials-block_1'
+      label: ''
+      label_display: visible
+      provider: views
+      context_mapping: {  }
+      views_label: ''
+      items_per_page: none
+      region: first
+      weight: 0
+      uuid: ac9440bb-7606-4f3f-90e7-e42f66b2166d
+    5ac55516-2594-4b57-9d44-0fcdf25a48e8:
+      id: 'views_block:assets-block_2'
+      label: ''
+      label_display: visible
+      provider: views
+      context_mapping: {  }
+      views_label: ''
+      items_per_page: none
+      region: first
+      weight: 0
+      uuid: 5ac55516-2594-4b57-9d44-0fcdf25a48e8
+    fca5f826-18f6-4aae-9cdd-8a18dcae1bfd:
+      id: 'block_content:c61ceb47-b11f-4e7d-b119-077030f496d5'
+      label: 'Welcome Provider'
+      label_display: '0'
+      provider: block_content
+      status: true
+      info: ''
+      view_mode: full
+      context_mapping: {  }
+      region: top
+      weight: 0
+      uuid: fca5f826-18f6-4aae-9cdd-8a18dcae1bfd
+    92dbed1c-101b-4e8d-a0ed-844eb704be6f:
+      id: 'views_block:provider_services-block_1'
+      label: ''
+      label_display: visible
+      provider: views
+      context_mapping: {  }
+      views_label: ''
+      items_per_page: none
+      region: second
+      weight: 0
+      uuid: 92dbed1c-101b-4e8d-a0ed-844eb704be6f
+  page_title: 'Provider Dashboard'
+  layout: layout_twocol
+  layout_settings: {  }
+  builder: standard
+  storage_type: page_manager
+  storage_id: provider_dashboard-panels_variant-0
+page: provider_dashboard
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

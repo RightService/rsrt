@@ -1,0 +1,28 @@
+uuid: 144b2268-8b64-4999-8700-1cf15ea0007b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.story
+  module:
+    - linkchecker
+    - text
+third_party_settings:
+  linkchecker:
+    scan: true
+    extractor: html_link_extractor
+id: node.story.body
+field_name: body
+entity_type: node
+bundle: story
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,55 @@
+uuid: a5f510b0-0492-4d07-b856-61a41693b79e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.provider.body
+    - field.field.node.provider.field_address
+    - field.field.node.provider.field_contactemail
+    - field.field.node.provider.field_contactname
+    - field.field.node.provider.field_contactphone
+    - field.field.node.provider.field_contacttitle
+    - field.field.node.provider.field_counties
+    - field.field.node.provider.field_location_phone
+    - field.field.node.provider.field_logo
+    - field.field.node.provider.field_notes
+    - field.field.node.provider.field_public_email
+    - field.field.node.provider.field_reach
+    - field.field.node.provider.field_url
+    - node.type.provider
+  module:
+    - text
+    - user
+id: node.provider.teaser
+targetEntityType: node
+bundle: provider
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_address: true
+  field_contactemail: true
+  field_contactname: true
+  field_contactphone: true
+  field_contacttitle: true
+  field_counties: true
+  field_location_phone: true
+  field_logo: true
+  field_notes: true
+  field_public_email: true
+  field_reach: true
+  field_url: true
+  search_api_excerpt: true

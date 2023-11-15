@@ -1,0 +1,7 @@
+name: Library dashboard routing
+description: 'Library dashboard routing module'
+type: module
+core_version_requirement: ^9 || ^10
+package: Custom routing
+dependencies:
+  - default_county:default_county

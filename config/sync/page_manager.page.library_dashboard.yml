@@ -1,0 +1,22 @@
+uuid: 1be14e4e-0efc-4f74-a54e-57220851875d
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: library_dashboard
+label: 'Library Dashboard'
+description: ''
+use_admin_theme: false
+path: /library/dashboard
+access_logic: and
+access_conditions:
+  -
+    id: user_role
+    negate: false
+    context_mapping:
+      user: current_user
+    roles:
+      administrator: administrator
+      library: library
+parameters: {  }

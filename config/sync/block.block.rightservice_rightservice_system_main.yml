@@ -1,0 +1,22 @@
+uuid: 9e1ae539-bde5-404f-9621-682238f6b69f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - rightservice
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: rightservice_rightservice_system_main
+theme: rightservice
+region: content
+weight: -6
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  label_display: '0'
+  provider: system
+visibility: {  }

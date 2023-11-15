@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: Yp8wh85L3AsvnFyeE4u_Z6JBAGJY8Bvr7-zlO4IoNfs
+gmap_api_key: AIzaSyAPKZCMw1VfUiFCsXtq6QmwN4MGDr40DI0
+gmap_api_localization: default
+theming:
+  markers_location:
+    security: 'public://'
+    rel_path: geofieldmap_icons
+  additional_markers_location: ''
+  markers_extensions: 'gif png jpg jpeg'
+  markers_filesize: '250 KB'
+geocoder:
+  caching:
+    clientside: session_storage

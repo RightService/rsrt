@@ -1,0 +1,63 @@
+_core:
+  default_config_hash: YGueb7ImKHSG1RRmIB1iqPHVGXTmI2yvCcB-RX7FPeY
+site_id: '1'
+url_http: 'https://stats.rightservicefl.org/'
+url_https: 'https://stats.rightservicefl.org/'
+domain_mode: 0
+visibility:
+  request_path_mode: 0
+  request_path_pages: "/admin\r\n/admin/*\r\n/batch\r\n/node/add*\r\n/user/*/*"
+  user_role_mode: 1
+  user_role_roles:
+    content_editor: content_editor
+    provider: provider
+    administrator: administrator
+    library: library
+  user_account_mode: 1
+track:
+  mailto: true
+  files: true
+  files_extensions: '7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip'
+  colorbox: true
+  userid: false
+  messages: {  }
+  site_search: true
+privacy:
+  donottrack: true
+  disablecookies: false
+custom:
+  variable:
+    1:
+      slot: 1
+      name: Service
+      value: '[node:nid][node:title]'
+      scope: page
+    2:
+      slot: 2
+      name: Provider
+      value: '[node:field_provider:entity:nid][node:field_provider:entity:title]'
+      scope: page
+    3:
+      slot: 3
+      name: County
+      value: '[default_county:name_county]'
+      scope: page
+    4:
+      slot: 4
+      name: 'Zip Code'
+      value: '[current-user:field_profile_zipcode]'
+      scope: page
+    5:
+      slot: 5
+      name: 'User Role'
+      value: '[current-user:roles:first]'
+      scope: page
+codesnippet:
+  before: "_paq.push(['setCustomDimension', 1, '[node:nid][node:title]']);\r\n_paq.push(['setCustomDimension', 2, '[node:field_provider:entity:nid][node:field_provider:entity:title]']);\r\n_paq.push(['setCustomDimension', 3, '[default_county:name_county]']);\r\n_paq.push(['setCustomDimension', 4, '[current-user:field_profile_zipcode]']);\r\n_paq.push(['setCustomDimension', 5, '[current-user:roles:first]']);\r\n_paq.push(['setCustomDimension', 6, '[node:nid][node:title]']);\r\n_paq.push(['setCustomDimension', 7, '[node:field_provider:entity:nid][node:field_provider:entity:title]']);\r\n_paq.push(['setCustomDimension', 8, '[default_county:name_county]']);"
+  after: ''
+translation_set: true
+disable_tracking: false
+cache: true
+page_title_hierarchy: false
+page_title_hierarchy_exclude_home: true
+status_codes_disabled: {  }

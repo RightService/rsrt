@@ -1,0 +1,14 @@
+uuid: 684cc084-af08-4ca0-9da9-3b08672d9146
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.library
+  module:
+    - user
+id: user_add_role_action.library
+label: 'Add the library role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: library

@@ -1,0 +1,13 @@
+<?php
+
+  /**
+   * Remove sticky/promote entirely from node/X/edit & node/X/add forms.
+   * 
+   * Implements hook_form_BASE_FORM_ID_alter().
+   */
+  function disable_promotions_form_node_form_alter(&$form, &$form_state, $form_id) {
+    $options = array('promote', 'sticky');
+    foreach ($options as $key) {
+      $form[$key]['#access'] = FALSE;
+    }
+  }

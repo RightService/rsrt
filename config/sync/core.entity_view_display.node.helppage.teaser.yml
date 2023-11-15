@@ -1,0 +1,39 @@
+uuid: af3e436d-2d0b-48b3-9262-f7307ef71a14
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.helppage.body
+    - field.field.node.helppage.field_files
+    - field.field.node.helppage.field_supportpagetype
+    - field.field.node.helppage.field_supporturl
+    - field.field.node.helppage.og_group_ref
+    - node.type.helppage
+  module:
+    - text
+    - user
+id: node.helppage.teaser
+targetEntityType: node
+bundle: helppage
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_files: true
+  field_supportpagetype: true
+  field_supporturl: true
+  og_group_ref: true
+  search_api_excerpt: true

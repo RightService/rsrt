@@ -1,0 +1,16 @@
+library_dashboard.content:
+  path: '/library/dashboard/{county}'
+  defaults: 
+    _controller: '\Drupal\library_dashboard\Controller\LibraryDashboardController::content' 
+    _title: 'Librarian Dashboard'
+    county: ''
+  requirements: 
+    _role: 'administrator+library'
+library_dashboard.pages:
+  path: '/library/pages/{page_url}/{county}'
+  defaults: 
+    _controller: '\Drupal\library_dashboard\Controller\LibraryDashboardController::pages' 
+    _title: 'Librarian Dashboard Page'
+    county: ''
+  requirements: 
+    _role: 'administrator+library'

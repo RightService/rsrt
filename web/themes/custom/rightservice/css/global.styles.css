@@ -1,0 +1,1731 @@
+/*
+ * @file
+ * global.styles
+ *
+ * Styles you add here will load for all device sizes, they are "global", as
+ * opposed to "responsive" styles, which only load for a given breakpoint (media
+ * query) that you set in theme settings. See the README for more details.
+ *
+ *
+ * How to use this file:
+ * --------------------
+ *
+ * There are many empty selectors and some basic styles to act as a guide.
+ * Nothing is set in stone and you can change anything - even delete all of it
+ * and start with your own clean slate.
+ *
+ * To FORCE PRINT all selectors you can search and replace a single { (opening
+ * curly brace) and insert an empty comment. This is very useful in conjuction
+ * with FireSass: https://addons.mozilla.org/en-US/firefox/addon/firesass-for-firebug/
+ *
+ * See global.base also which includes normalize.css and some additional
+ * helper classes and base styles.
+ */
+/* =============================================================================
+ *   Base
+ * ========================================================================== */
+/*
+ * To preserve theme settings never apply font properties to the HTML element.
+ * This is critically important if you are using the Responsive JavaScript
+ * feature as this relies on being able to set a pseudo font family on the HTML
+ * element. If you need to set default font properties of any kind use the BODY
+ * element as these can be overridden using font theme settings.
+ */
+html {
+  background: #abb3be; }
+
+body {
+  font-family: "Trebuchet MS", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 87.5%; }
+
+/* =============================================================================
+ *   HTML Elements
+ * ========================================================================== */
+h1 {
+  font-size: 37px;
+  line-height: 46px; }
+h1 a {
+  color: #163e71; }
+header h1 {
+  margin: 0; }
+
+h2 {
+  color: #163e71;
+  font-size: 29px;
+  line-height: 36px; }
+h2 a {
+  color: #163e71; }
+
+h3 {
+  color: #163e71;
+  font-size: 24px;
+  line-height: 36px; }
+h3 a {
+  color: #163e71; }
+
+h4 {
+  color: #163e71;
+  font-size: 20px;
+  line-height: 32px; }
+h4 a {
+  color: #163e71; }
+
+h5 {
+  color: #163e71;
+  font-size: 18px;
+  line-height: 29px; }
+h5 a {
+  color: #163e71; }
+
+h6 {
+  color: #163e71;
+  font-size: 15px;
+  line-height: 26px; }
+h6 a {
+  color: #163e71; }
+
+p {
+  color: #444;
+  font-size: 15px;
+  line-height: 24px; }
+
+pre,
+code,
+tt,
+samp,
+kbd,
+var {
+  font-family: Consolas, Monaco, "Courier New", Courier, monospace, sans-serif; }
+
+a {
+  color: #06b; }
+
+/* =============================================================================
+ *   Wrappers
+ * ========================================================================== */
+/*
+ * Page wrapper, includes the .container class which sets the overall page or section width
+ * Main wrapper in page.tpl.php, the .container class sets the width of the page, do not add width to it!
+ */
+/*
+ * Wraps all header elements - branding and .region-header
+ */
+/*
+ * Wraps the sidebars the content column
+ */
+/*
+ * Main content column wrapper
+ */
+/*
+ * Wraps the main-content-header, the content region and feed-icons. Use this wrapper to style the entire main content column
+ */
+#main-content {
+  margin: 0; }
+
+#main-content-header {
+  background: #163e71;
+  color: #fff;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 28px; }
+
+/*
+ * Wraps the content region, avoid applying styles to this wrapper, its used mainly for position and invisible gutters and can be problematic to style
+ */
+/*
+ * Footer wrapper
+ */
+/*
+ * Panels may need additional margin wrangling when in the $content region
+ */
+/*
+ * Full Width Wrappers
+ * These are used in the optional page--full-width-wrappers.tpl.php template.
+ * All have internal .container classes. In the full width wrapper template the
+ * .container classes set the width or max-width of the contained element - you
+ * can style this but never add any width/margin/padding/borders etc to .container
+ */
+/*
+ * Wraps #page
+ */
+body {
+  padding-top: 1px; }
+
+#page.container {
+  background: #fff;
+  margin-top: 19px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); }
+
+/*
+ * Wraps the leaderboard
+ */
+/*
+ * Wraps the header
+ */
+#header-wrapper {
+  /* Debug styles, is this working */
+  background: rgba(255, 192, 203, 0.5); }
+
+#header {
+  background: #163e71; }
+
+/*
+ * Wraps the nav elements
+ */
+/*
+ * Wraps breadcrumb
+ */
+/*
+ * Wraps messages and help
+ */
+/*
+ * Wraps the secondary content/preface region
+ */
+/*
+ * Wraps the main content column
+ */
+/*
+ * Wraps the tertiary content/postfix region
+ */
+/*
+ * Footer wrapper
+ */
+#footer-wrapper {
+  /* Debug styles, is this working? */
+  background: rgba(255, 192, 203, 0.5); }
+
+/* =============================================================================
+ *   Branding
+ * ========================================================================== */
+/*
+ * Wraps all the branding elements, logo, name and slogan
+ */
+/*
+ * Logo
+ */
+#logo {
+  padding: 10px 0; }
+#logo img {
+  vertical-align: bottom; }
+
+/*
+ * Wrapper for the site name and slogan (hgroup)
+ */
+/*
+ * Site name (h1)
+ */
+#site-name {
+  margin: 0; }
+#site-name a:link, #site-name a:visited {
+  text-decoration: none; }
+#site-name a:hover, #site-name a:focus {
+  text-decoration: underline; }
+
+/*
+ * Site slogan (h2)
+ */
+#site-slogan {
+  margin: 0; }
+
+/* =============================================================================
+ *   Page content header
+ * ========================================================================== */
+/*
+ * Main content header wraps the page title, tabs and actions links
+ */
+/*
+ * The main page title (h1)
+ */
+#page-title {
+  margin: 0; }
+
+/* =============================================================================
+ *   Misc Global Styles
+ * ========================================================================== */
+/*
+ * Feed icons
+ */
+/*
+ * Aggregator feed source
+ */
+#aggregator .feed-source .feed-icon {
+  display: inline;
+  float: none;
+  margin-right: 10px; }
+
+.feed-details dt,
+.feed-details dd {
+  display: inline;
+  margin: 0; }
+
+/*
+ * Generic styles for the more link
+ */
+/*
+ * Generic styles for links. See the ul.links declaration in node and comment stylesheets
+ */
+ul.links {
+  margin: 0;
+  padding: 0; }
+ul.links.inline {
+  display: block; }
+ul.links li {
+  display: inline;
+  list-style: none;
+  padding: 0 10px 0 0; }
+
+/*
+ * Search results are an ordered list so reset the margin
+ */
+.search-results {
+  margin: 0; }
+
+/* =============================================================================
+ *   Regions
+ * ========================================================================== */
+/*
+ * Standard region wrapper, don't add width to any regions, you will bork the layout - no margin, padding or borders etc
+ */
+/*
+ * Regions have an inner div - perfect for adding margin, padding or borders
+ */
+/*
+ * Regions can be nested, such as when using Panels
+ */
+/*
+ * Header region, embedded in the #header
+ */
+/*
+ * Generally used to output Drupals help block, if the help module is enabled
+ */
+/*
+ * Secondary content
+ */
+/*
+ * Sits above the main content header, like a content-top region
+ */
+/*
+ * Sits below the main content, like a content-bottom region
+ */
+/*
+ * Sidebars - targets both
+ */
+/*
+ * First sidebar
+ */
+.region-sidebar-first {
+  background: #edf0f4; }
+.region-sidebar-first .block-inner {
+  margin: 0;
+  padding: 20px 40px; }
+.region-sidebar-first .block-region-sidebar-first {
+  margin-bottom: 0; }
+.region-sidebar-first .block-language {
+  padding-top: 0; }
+.region-sidebar-first .block-language .block-inner {
+  padding-top: 0; }
+
+/*
+ * Second sidebar
+ */
+/*
+ * Tertiary content
+ */
+/*
+ * Footer region
+ */
+/* =============================================================================
+ *   Links
+ * ========================================================================== */
+a {
+  text-decoration: none; }
+a:hover, a:focus {
+  text-decoration: underline; }
+
+/* =============================================================================
+ *   Primary, Secondary and Menu Bar region menus
+ * ========================================================================== */
+/*
+ * Use one of the following id's for granular control:
+ *  - #menu-bar (menu bar region)
+ *  - #primary-menu (main menu)
+ *  - #secondary-menu (secondary/user menu)
+ * You can target all of these with .nav or div[id$="menu-bar"]
+ */
+.nav {
+  clear: both;
+  margin: 10px 0; }
+.nav ul,
+.nav ul.menu {
+  margin: 0;
+  padding: 0; }
+.nav li,
+.nav ul.menu li {
+  display: inline;
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+.nav li a,
+.nav ul.menu li a {
+  display: block;
+  white-space: nowrap;
+  padding: 0 10px; }
+.nav .block {
+  margin-bottom: 0; }
+
+/* =============================================================================
+ *   Superfish
+ * ========================================================================== */
+ul.sf-menu {
+  margin-bottom: 0; }
+ul.sf-menu a {
+  border-left: 0;
+  border-top: 0;
+  padding: 0 10px;
+  text-decoration: none;
+  height: 2.5em;
+  line-height: 2.5em; }
+ul.sf-menu li:hover, ul.sf-menu li.sfHover {
+  outline: 0; }
+ul.sf-menu a:focus, ul.sf-menu a:hover, ul.sf-menu a:active {
+  outline: 0; }
+
+/*
+ * Superfish blocks
+ */
+.block-superfish ul {
+  margin: 0 !important;
+  padding: 0 !important; }
+.block-superfish li {
+  margin: 0 !important;
+  padding: 0 !important; }
+
+/*
+ * Vertical style
+ */
+.sf-vertical {
+  width: 100%; }
+.sf-vertical li {
+  width: 100%; }
+.sf-vertical li:hover ul, .sf-vertical li.sfHover ul {
+  left: 100%;
+  top: 0;
+  margin: 0;
+  padding: 0; }
+.sf-vertical li a {
+  padding: 0 10px; }
+
+/*
+ * Navbar style
+ */
+.sf-navbar {
+  padding-bottom: 0 !important; }
+
+/*
+ * Sensible padding for the default style
+ */
+.sf-menu.sf-style-default a {
+  padding: 0 10px; }
+
+/* =============================================================================
+ *   Menus, usually blocks
+ * ========================================================================== */
+ul.menu {
+  padding-left: 15px; }
+ul.menu ul {
+  padding-left: 15px; }
+ul.menu li {
+  margin: 0; }
+
+/* If li.content exists it's a problem, so reset the padding */
+.block .menu li.content {
+  padding: 0; }
+
+/* =============================================================================
+ *   Book navigation menu
+ * ========================================================================== */
+.book-navigation .page-up {
+  /* Prevent text wrapping to a new line, assumes English "up" is used (two characters) */
+  min-width: 2em;
+  white-space: nowrap; }
+.book-navigation .menu {
+  margin-left: 0; }
+
+/* =============================================================================
+ *   Breadcrumbs
+ * ========================================================================== */
+.breadcrumb-wrapper {
+  margin: 0; }
+
+#breadcrumb {
+  margin: 0;
+  background: #163e71;
+  padding: 10px 60px;
+  /* If the label is set to show in theme settings the label class is added */ }
+#breadcrumb .breadcrumb-label {
+  font-size: 1em;
+  display: inline;
+  padding-right: 10px; }
+#breadcrumb .breadcrumb-label:after {
+  content: ":"; }
+#breadcrumb ol {
+  margin: 5px 0 15px;
+  padding: 0; }
+#breadcrumb .with-breadcrumb-label ol {
+  display: inline; }
+#breadcrumb li {
+  list-style: none;
+  display: inline;
+  color: #b7c4d4; }
+#breadcrumb a {
+  color: #b7c4d4; }
+
+/* =============================================================================
+ *   Pagers
+ * ========================================================================== */
+ul.pager {
+  clear: both;
+  margin: 0;
+  text-align: center; }
+
+.item-list ul.pager li {
+  margin: 0; }
+
+.item-list ul,
+.block-content ul,
+ul {
+  padding: 0; }
+.item-list ul li,
+.block-content ul li,
+ul li {
+  display: block;
+  padding-left: 16px;
+  position: relative;
+  margin-left: 0;
+  margin-bottom: 6px; }
+
+ul.service-menu > li {
+  margin: 25px 0; }
+ul.service-menu > li:before {
+  display: none; }
+
+ul.service-menu .term-child li {
+  display: inline-block !important;
+  padding-right: 9px; }
+ul.service-menu .term-child li:first-child {
+  padding-left: 0px !important; }
+ul.service-menu .term-child li:first-child:before {
+  display: none; }
+
+ul.service-menu .image {
+  display: inline-block;
+  float: left;
+  width: 90px;
+  margin-right: 20px; }
+
+ul.service-menu h2 {
+  font-size: 24px !important;
+  margin: 0.6em 0; }
+
+ul.service-menu .sub-service-menu {
+  padding-left: 90px; }
+
+ul.pager li {
+  background-image: none;
+  display: inline;
+  list-style-type: none;
+  padding: .5em; }
+ul.pager li.pager-current {
+  font-weight: 700; }
+
+.block ul.pager li {
+  margin: 0; }
+.block ul.pager li:before {
+  display: none; }
+
+/*
+ * Theme the various states of pager links
+ */
+/* =============================================================================
+ *   Skip Navigation
+ * ========================================================================== */
+#skip-link {
+  left: 50%;
+  margin-left: -6.5em;
+  margin-top: 0;
+  padding: 0 0.5em;
+  position: absolute;
+  width: 12em;
+  z-index: 50; }
+#skip-link a {
+  background: #444;
+  background: rgba(0, 0, 0, 0.6);
+  color: #abb3be;
+  display: block;
+  line-height: 2;
+  padding: 0;
+  text-align: center;
+  text-decoration: none; }
+#skip-link a:link, #skip-link a:visited {
+  background: #444;
+  background: rgba(0, 0, 0, 0.6);
+  color: #abb3be;
+  display: block;
+  line-height: 2;
+  padding: 0;
+  text-align: center;
+  text-decoration: none; }
+#skip-link a:hover, #skip-link a:focus, #skip-link a:active {
+  outline: 0; }
+
+/* =============================================================================
+ *   Tabs (local tasks)
+ * ========================================================================== */
+#tasks {
+  margin-bottom: 15px; }
+
+ul.primary {
+  border-bottom: none;
+  margin: 20px 0;
+  padding: 0; }
+ul.primary li {
+  display: block;
+  float: left;
+  margin: 0 1px -1px; }
+ul.primary li:before {
+  display: none; }
+ul.primary li a {
+  background-color: #fff;
+  border-color: #fff;
+  margin-right: 1px;
+  display: block;
+  float: left;
+  border-radius: 5px;
+  padding: 1px 10px;
+  line-height: 28px;
+  color: #163e71;
+  font-family: "Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold; }
+ul.primary li a:hover, ul.primary li a:focus {
+  background-color: #eee;
+  border-color: #fff; }
+ul.primary li.is-active a,
+ul.primary li.is-active a:hover,
+ul.primary li.is-active a:focus {
+  border: 1px solid #bbb;
+  background-color: #163e71;
+  border-color: #fff;
+  color: #fff; }
+
+ul.secondary {
+  border-bottom: 1px solid #fff;
+  margin: 1em 0 0;
+  padding: 0 .3em 1em; }
+ul.secondary li {
+  border-right: 0;
+  list-style: none;
+  padding: 0 10px 0 0; }
+ul.secondary li a:hover, ul.secondary li a.active {
+  border-bottom: none;
+  text-decoration: underline; }
+
+/* =============================================================================
+ *   Action links
+ * ========================================================================== */
+ul.action-links {
+  margin: 20px 0 0;
+  list-style: none; }
+
+/* =============================================================================
+ *  Field Styling
+ * ========================================================================== */
+/*
+ * Wrapper for any field
+ */
+
+/*
+ * Above and inline classes are on the field wrapper
+ */
+/*
+ * When labels are set to inline in field display settings the clearfix class is automatically added
+ */
+/*
+ * Labels are h2 in Adaptivetheme. Use a strong selector to mitigate unwanted ineritance issues
+ */
+.field__label {
+  font-size: 1em;
+  font-weight: 700;
+  font-family: inherit;
+  line-height: inherit;
+  margin-bottom: 0;
+  color: #163e71; }
+
+/*
+ * Field types (Core)
+ */
+/*
+ * Image fields use the <figure> and <figcaption> elements from HTML5
+ */
+/*
+ * Taxonomy
+ */
+.field-type-taxonomy-term-reference {
+  /* The same bottom margin as p, blockquote, ul, ol and dl */
+  margin-bottom: 1.5em; }
+.field-type-taxonomy-term-reference.field-label-inline .field-items {
+  margin: 0;
+  padding: 0; }
+.field-type-taxonomy-term-reference.field-label-inline .field-item {
+  display: inline;
+  list-style: none;
+  padding: 0 10px 0 0; }
+
+/*
+ * Text
+ */
+/*
+ * Long text
+ */
+/*
+ * Text with summary
+ */
+/*
+ * File
+ */
+/*
+ * Number/Integer
+ */
+/*
+ * Decimal
+ */
+/*
+ * Number float
+ */
+/*
+ * List
+ */
+/*
+ * List boolean
+ */
+/*
+ * List integer
+ */
+/*
+ * List float
+ */
+/*
+ * Field types (Contrib)
+ */
+/*
+ * Named fields
+ */
+/*
+ * Underscores in field name are replaced with dashes
+ */
+/*
+ * Image Alignment Theme Settings - included here so you can easily override
+ */
+/*
+ * Float none setting
+ */
+/*
+ * Float left setting
+ */
+.ia-l .field-type-image figure,
+.iat-l .field-type-image figure {
+  margin: 5px 20px 15px 0; }
+
+/*
+ * Centered setting
+ */
+.ia-c .field-type-image figure,
+.iat-c .field-type-image figure {
+  margin: 5px auto 15px; }
+
+/*
+ * Float right setting
+ */
+.ia-r .field-type-image figure,
+.iat-r .field-type-image figure {
+  margin: 5px 0 15px 20px; }
+
+/* =============================================================================
+ *   Block Styling
+ * ========================================================================== */
+/*
+ * Main wrapper for most blocks, block_system_main does not have it
+ */
+.block {
+  margin-bottom: 20px; }
+header .block {
+  margin: 0; }
+
+/*
+ * Inner wrapper for most blocks, good for margin, padding and borders, block_system_main does not have it
+ */
+/*
+ * The first block in the region
+ */
+/*
+ * The last block in the region
+ */
+/*
+ * Zebra striping for each block in the region
+ */
+/*
+ * Zebra striping for each block in the region
+ */
+/*
+ * Block title
+ */
+.block-title {
+  margin: 0; }
+
+/*
+ * Block content wrapper
+ */
+/*
+ * Match item list and block menu margin and padding
+ */
+.block-content ul,
+.block-content ol {
+  padding: 0 0 0 15px; }
+.block-content li {
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Block for the latest news items in the first category
+ */
+/*
+ * Block for the latest news items in the first feed
+ */
+/*
+ * First block created with "Add block" link
+ */
+/*
+ * "Recent blog posts" block
+ */
+/*
+ * "Book navigation" block for the current book's table of contents
+ */
+/*
+ * "Recent comments" block
+ */
+/*
+ * "Active forum topics" block
+ */
+/*
+ * "New forum topics" block
+ */
+/*
+ * Language switcher block
+ */
+/*
+ * Custom menu block
+ */
+/*
+ * "Recent content" block
+ */
+/*
+ * "Syndicate" block for primary RSS feed; see also page.css's .feed-icon
+ */
+/*
+ * "Most recent poll" block
+ */
+/*
+ * "Author information" block for the profile of the page's author
+ */
+/*
+ * "Search form" block
+ */
+/*
+ * "Shortcuts" block
+ */
+/*
+ * "Popular content" block
+ */
+/*
+ * "Main menu" block
+ */
+/*
+ * "Management" block for Drupal management menu
+ */
+/*
+ * "Navigation" block for Drupal navigation menu
+ */
+/*
+ * "User menu" block for Drupal user menu
+ */
+/*
+ * "System help" block
+ */
+/*
+ * "Main page content" block
+ */
+/*
+ * "Powered by Drupal" block
+ */
+/*
+ * "User login form" block
+ */
+/*
+ * "Who's new" block for a list of the newest users
+ */
+/*
+ * "Who's online" block for a list of the online users
+ */
+/* =============================================================================
+ *   Node Styling
+ * ========================================================================== */
+.node {
+  margin-bottom: 20px; }
+.node .node-title {
+  margin: 0; }
+
+/*
+ * All nodes are given a node-FOO class that describes the type of content that
+ * it is. If you create a new content type called "my-custom-type", it will
+ * receive a "node-my-custom-type" class.
+ */
+/* =============================================================================
+ *   Comment Styling - Comments, comment wrapper, comment form
+ * ========================================================================== */
+/*
+ * Wrapper for the list of comments and its titles
+ */
+#comments {
+  margin: 1.5em 0; }
+#comments h2.comment-title {
+  margin: 0; }
+#comments h2.comment-form {
+  margin: 0; }
+
+/*
+ * Wrapper for a single comment
+ */
+.comment {
+  margin-bottom: 20px; }
+
+/*
+ * Comment title
+ */
+.comment-title {
+  margin: 0; }
+
+/*
+ * Comment states
+ */
+/*
+ * Preview of the comment before submitting new or updated comment
+ */
+/*
+ * "New" marker for comments that are new for the current user
+ */
+.new {
+  color: #c00; }
+
+/*
+ * Nested comments are indented
+ */
+.indented {
+  margin-left: 40px; }
+
+/* =============================================================================
+ *   Forms
+ * ========================================================================== */
+/*
+ * Wrapper for a form element (or group of form elements) and its label
+ */
+.form-item,
+.form-actions {
+  font-family: "Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif; }
+.form-item input,
+.form-item textarea,
+.form-item select,
+.form-actions input,
+.form-actions textarea,
+.form-actions select {
+  font-size: 14px;
+  padding: 1px 10px;
+  line-height: 28px;
+  border-radius: 5px;
+  height: auto;
+  box-sizing: border-box;
+  box-shadow: none;
+  border: 1px solid #aaa; }
+.form-item input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
+.form-actions input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]) {
+  width: 100%; }
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error,
+.form-actions input.error,
+.form-actions textarea.error,
+.form-actions select.error {
+  border: 1px solid #c00; }
+.form-item label,
+.form-actions label {
+  font-weight: 700;
+  color: #163e71;
+  font-size: 15px;
+  margin-bottom: 3px; }
+.form-item .description,
+.form-actions .description {
+  font-size: .8em;
+  margin-top: 2px;
+  opacity: .7; }
+.form-item button, .form-item input[type="button"], .form-item input[type="reset"], .form-item input[type="submit"],
+.form-actions button,
+.form-actions input[type="button"],
+.form-actions input[type="reset"],
+.form-actions input[type="submit"] {
+  background: #163e71;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  padding: 1px 20px;
+  line-height: 28px;
+  font-family: "Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  width: auto; }
+.form-item select,
+.form-actions select {
+  height: 32px;
+  line-height: 28px; }
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  background: #163e71;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  padding: 1px 20px;
+  line-height: 28px;
+  font-family: "Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  width: auto; }
+
+/*
+ * Highlight marks and form required mark
+ */
+.marker,
+.form-required {
+  color: #c00; }
+
+/*
+ * The submit button
+ */
+.container-inline div,
+.container-inline label {
+  display: inline; }
+
+/*
+ * Define consistent borders
+ */
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Tips for Drupal's input formats
+ */
+/*
+ * Buttons used by contrib modules like Media
+ */
+/*
+ * Password confirmation
+ */
+.password-parent,
+.confirm-parent {
+  margin: 0; }
+
+/* =============================================================================
+ *   Tables
+ * ========================================================================== */
+table {
+  margin: 10px 0;
+  padding: 0;
+  width: 100%; }
+table.sticky-header {
+  z-index: 10; }
+
+table,
+thead,
+tbody,
+tr,
+th,
+td {
+  border-color: #fff; }
+
+table,
+td,
+th {
+  vertical-align: middle; }
+
+caption,
+th,
+td {
+  text-align: left; }
+
+thead tr {
+  font-weight: 700;
+  background-color: #e5e5e5; }
+
+td,
+th {
+  border-bottom: 0;
+  margin: 0;
+  padding: 5px 7px; }
+
+tbody tr {
+  border-top: 1px solid #fff; }
+
+tr {
+  /* Table row striping */ }
+tr.odd {
+  background: #abb3be; }
+tr.info, tr.even, tr:nth-child(2n+2) {
+  border-bottom: 0;
+  background-color: #f5f5f5; }
+tr.odd td.active {
+  background-color: #eee; }
+tr.even td.active {
+  background-color: #ebebeb; }
+
+/*
+ * Forum tables
+ * Core sets white-space to nowrap, which makes no sense
+ */
+#forum td .created,
+#forum td .posts,
+#forum td .topics,
+#forum td .last-reply,
+#forum td .replies,
+#forum td .pager {
+  white-space: normal; }
+
+/* =============================================================================
+ *   Messages
+ * ========================================================================== */
+div.messages {
+  margin-bottom: 10px;
+  margin-top: 10px; }
+div.messages ul {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+/*
+ * Unpublished nodes
+ */
+.node-unpublished p.unpublished,
+.comment-unpublished p.unpublished {
+  color: pink;
+  color: rgba(239, 170, 170, 0.4);
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.2;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  text-align: center;
+  text-transform: uppercase;
+  word-wrap: break-word; }
+.ie6-7 .node-unpublished p.unpublished > *, .ie6-7
+.comment-unpublished p.unpublished > * {
+  position: relative; }
+
+/* =============================================================================
+ *    Maintenance pages
+ * ========================================================================== */
+.maintenance-page .container {
+  padding: 40px 0; }
+.maintenance-page #site-name,
+.maintenance-page #page-title {
+  margin: 0; }
+
+.db-offline .container {
+  margin: 0 auto;
+  padding: 40px 0;
+  width: 100%;
+  max-width: 960px; }
+.db-offline div.messages {
+  margin: 20px 0 0; }
+.db-offline #content {
+  padding: 20px 0; }
+
+/* =============================================================================
+ *   Misc overrides for contrib modules
+ * ========================================================================== */
+/*
+ * Admin menu overrides
+ */
+#admin-menu {
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Devel Module
+ */
+.dev-query {
+  background: #eee;
+  padding: 30px; }
+
+/*
+ * Styleguide module tweaks
+ */
+#styleguide-header {
+  padding: 0 10px; }
+#styleguide-header .item-list {
+  font-family: inherit;
+  margin: 0 20px 20px 0;
+  min-height: 260px;
+  width: auto; }
+
+.block-main {
+  padding: 40px 60px;
+  box-sizing: border-box; }
+
+.region-sidebar-first .region-inner {
+  position: relative; }
+
+.block-content ul.language-switcher-locale-url,
+.language-switcher-locale-url,
+ul.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  word-wrap: normal; }
+.block-content ul.language-switcher-locale-url li,
+.language-switcher-locale-url li,
+ul.menu li {
+  color: #163e71;
+  font: 700 18px/26px "Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  margin: 18px 0;
+  list-style: none; }
+.block-content ul.language-switcher-locale-url li:before,
+.language-switcher-locale-url li:before,
+ul.menu li:before {
+  display: none; }
+.block-content ul.language-switcher-locale-url li:first-child,
+.language-switcher-locale-url li:first-child,
+ul.menu li:first-child {
+  margin-top: 0; }
+.block-content ul.language-switcher-locale-url li a,
+.language-switcher-locale-url li a,
+ul.menu li a {
+  color: #163e71; }
+.block-content ul.language-switcher-locale-url li.active,
+.language-switcher-locale-url li.active,
+ul.menu li.active {
+  color: #cf3236; }
+.block-content ul.language-switcher-locale-url li.active a,
+.language-switcher-locale-url li.active a,
+ul.menu li.active a {
+  color: #cf3236; }
+.block-content ul.language-switcher-locale-url li.active:before,
+.language-switcher-locale-url li.active:before,
+ul.menu li.active:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -4px;
+  margin-right: 10px;
+  width: 7px;
+  height: 7px;
+  border-style: solid solid none none;
+  border-color: #cf3236;
+  border-width: 3px 3px 0 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+#block-mainmenu {
+  margin-bottom: 0; }
+#block-mainmenu .block-inner {
+  padding-top: 0; }
+
+.block-search .block-inner {
+  margin: 0; }
+
+.home-search {
+  background: url(../images/search.jpg) no-repeat center;
+  background-size: cover;
+  padding: 20px;
+  height: 260px;
+  display: flex;
+  position: relative; }
+.home-search .home-search_wrapper {
+  margin: auto; }
+.home-search h1 {
+  margin: 0 auto 29px;
+  text-align: center;
+  color: #fff; }
+.home-search .form-item, .home-search .form-actions {
+  margin: 0; }
+.home-search fieldset {
+  background: #fff;
+  border-radius: 10px;
+  padding: 0;
+  position: relative;
+  max-width: 700px;
+  margin: 20px auto; }
+.home-search fieldset input[type="text"],
+.home-search fieldset input[type="search"] {
+  background: transparent;
+  border: none !important;
+  outline: none;
+  box-shadow: none;
+  font: 400 20px/32px "Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  height: 60px;
+  padding: 15px 60px 15px 30px;
+  box-sizing: border-box;
+  width: 100%; }
+.home-search fieldset input[type="text"]:hover, .home-search fieldset input[type="text"]:focus, .home-search fieldset input[type="text"]:active,
+.home-search fieldset input[type="search"]:hover,
+.home-search fieldset input[type="search"]:focus,
+.home-search fieldset input[type="search"]:active {
+  border: none !important;
+  outline: none;
+  box-shadow: none; }
+.home-search fieldset input[type="submit"] {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: auto;
+  width: 60px;
+  border-radius: 10px;
+  border: none !important;
+  outline: none;
+  box-shadow: none;
+  background: url(../images/search-ico.png) no-repeat center;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  min-width: 0; }
+.home-search fieldset button:hover, .home-search fieldset button:focus, .home-search fieldset button:active {
+  border: none !important;
+  outline: none;
+  box-shadow: none; }
+.home-search .home-search_or {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  left: calc(50% - 25px);
+  bottom: -25px;
+  background: #fff;
+  text-align: center;
+  color: #8e97a2;
+  font: 400 17px/52px "Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif; }
+
+.region-content_body {
+  display: none; }
+.region-content_body.active {
+  display: block; }
+.region-content_body .region-list_value {
+  display: block;
+  padding: 3px 0;
+  color: #06b;
+  cursor: pointer;
+  font: 400 17px/26px "Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif; }
+.region-content_body tr.info, .region-content_body tr.even, .region-content_body tr:nth-child(2n+2) {
+  background-color: transparent; }
+.region-content_body td a {
+  color: #06b;
+  font: 400 17px/26px "Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif; }
+
+.select-county_toggle {
+  text-align: center;
+  list-style: none;
+  margin: 30px auto;
+  padding: 0; }
+.select-county_toggle li {
+  display: inline-block;
+  margin: 0 3px;
+  vertical-align: middle;
+  background: #dce1e8;
+  color: #163e71;
+  font: 500 17px/40px "Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer; }
+.select-county_toggle li:before {
+  display: none; }
+.select-county_toggle li.active {
+  background: #cf3236;
+  color: #fff; }
+.select-county_toggle li.active:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: calc(50% - 7px);
+  border-width: 7px 7px 0 7px;
+  border-color: #cf3236 transparent transparent;
+  border-style: solid; }
+
+.select-county h2 {
+  text-align: center;
+  font-weight: 700;
+  font-family: "Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif; }
+.select-county .view-header {
+  text-align: center; }
+
+.block-region-content.first .view-footer {
+  border-top: 1px solid #d5d9de;
+  margin-top: 20px;
+  padding-top: 20px;
+  column-count: 2; }
+.block-region-content.first .view-footer p strong {
+  color: #163e71;
+  font: 700 20px/32px "Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif; }
+.block-region-content.first .view-footer p a {
+  color: #06b;
+  font: 400 15px/24px "Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif; }
+
+#footer,
+#copyright {
+  color: #999;
+  font-family: "Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 20px; }
+#footer a,
+#copyright a {
+  color: #163e71; }
+#footer p,
+#copyright p {
+  color: #999;
+  font-family: "Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 20px; }
+#footer p a,
+#copyright p a {
+  color: #163e71; }
+#footer .block-countyfoot,
+#copyright .block-countyfoot {
+  display: none; }
+
+.region.region-sidebar-first.sidebar {
+  position: relative;
+  box-shadow: -10px 0 10px -10px rgba(0, 0, 0, 0.2) inset; }
+
+.footer_wrapper {
+  opacity: 0;
+  margin-bottom: 0; }
+.footer_wrapper + .footer_wrapper {
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.block.block-count-5.block-region-content.block-main .two-33-66.at-panel.panel-display {
+  font-family: "Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif; }
+.block.block-count-5.block-region-content.block-main .two-33-66.at-panel.panel-display a {
+  color: #163e71; }
+.block.block-count-5.block-region-content.block-main .two-33-66.at-panel.panel-display .region.region-two-33-66-first {
+  float: right; }
+.block.block-count-5.block-region-content.block-main .two-33-66.at-panel.panel-display .region.region-two-33-66-second {
+  float: left;
+  padding-right: 40px;
+  box-sizing: border-box; }
+
+.hidden {
+  display: none; }
+
+.login-anons {
+  background: url(/themes/custom/rightservice/images/login.jpg) no-repeat center;
+  background-size: cover;
+  color: #fff;
+  font-family: "Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  min-height: 300px; }
+.login-anons h2 {
+  font-size: 22px;
+  line-height: 28px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 12px; }
+.login-anons p {
+  font-size: 15px;
+  line-height: 24px;
+  color: #fff; }
+.login-anons .item-list {
+  margin-top: 20px; }
+.login-anons .item-list ul {
+  list-style: none;
+  padding: 0; }
+.login-anons .item-list li {
+  margin: 10px 0 0;
+  padding: 0; }
+.login-anons .item-list li:before {
+  display: none; }
+.login-anons button.btn,
+.login-anons a.btn,
+.login-anons .item-list a,
+.login-anons input[type="submit"] {
+  color: #163e71;
+  font: 700 14px/28px "Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  background: #fff;
+  border-radius: 5px;
+  padding: 1px 10px;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  display: block;
+  vertical-align: middle;
+  cursor: pointer;
+  margin: 5px 0 !important;
+  text-align: center;}
+.login-anons button.btn + .btn,
+.login-anons a.btn + .btn,
+.login-anons .item-list a + .btn,
+.login-anons input[type="submit"] + .btn {
+  margin-left: 10px; }
+.login-anons .login-anons_wrapper button.btn { width: 100%; }
+.login-anons button.btn:hover, .login-anons button.btn:active, .login-anons button.btn:focus, .login-anons button.btn:visited,
+.login-anons a.btn:hover,
+.login-anons a.btn:active,
+.login-anons a.btn:focus,
+.login-anons a.btn:visited,
+.login-anons .item-list a:hover,
+.login-anons .item-list a:active,
+.login-anons .item-list a:focus,
+.login-anons .item-list a:visited,
+.login-anons input[type="submit"]:hover,
+.login-anons input[type="submit"]:active,
+.login-anons input[type="submit"]:focus,
+.login-anons input[type="submit"]:visited {
+  color: #163e71;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  text-decoration: none; }
+.login-anons input[type="submit"] {
+  width: 100%;
+  background: #cf3236;
+  color: #fff;
+  margin-top: 10px; }
+.login-anons #user-login-form-additional {
+  display: none; }
+.login-anons #user-login-form {
+  display: none; }
+.login-anons #user-login-form .form-item,
+.login-anons #user-login-form .form-actions {
+  float: none;
+  padding: 0; }
+.login-anons.form-show #user-login-form-additional {
+  display: block; }
+.login-anons.form-show #user-login-form {
+  display: block; }
+.login-anons.form-show .login-anons_wrapper {
+  display: none; }
+.login-anons input[type="text"],
+.login-anons input[type="password"] {
+  background: #fff;
+  border-radius: 2px;
+  margin: 10px auto;
+  border: none !important;
+  outline: none;
+  box-shadow: none;
+  font: 400 12px/28px "Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  height: 30px;
+  padding: 1px 10px;
+  box-sizing: border-box;
+  width: 100%; }
+.login-anons input[type="text"]:hover, .login-anons input[type="text"]:focus, .login-anons input[type="text"]:active,
+.login-anons input[type="password"]:hover,
+.login-anons input[type="password"]:focus,
+.login-anons input[type="password"]:active {
+  border: none !important;
+  outline: none;
+  box-shadow: none; }
+.login-anons .block-inner .block-inner {
+  padding: 0; }
+
+html.js fieldset.collapsed {
+  height: auto; }
+
+html.js fieldset.collapsed .fieldset-legend,
+form details {
+  border: none; }
+html.js fieldset.collapsed .fieldset-legend > a,
+form details summary {
+  color: #163e71;
+  font: 700 20px "Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  padding-left: 6px; }
+html.js fieldset.collapsed .fieldset-legend > a:before,
+html.js fieldset.collapsible .fieldset-legend > a:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  float: left;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 5px 0;
+  margin-top: 9px; }
+html.js fieldset.collapsed .fieldset-legend > a:hover,
+html.js fieldset.collapsible .fieldset-legend > a:hover {
+  text-decoration: none; }
+html.js fieldset.collapsed .fieldset-legend > a:focus, html.js fieldset.collapsed .fieldset-legend > a:active,
+html.js fieldset.collapsible .fieldset-legend > a:focus,
+html.js fieldset.collapsible .fieldset-legend > a:active {
+  outline: none;
+  border: none;
+  text-decoration: none; }
+
+html.js fieldset.collapsible .fieldset-legend > a:before {
+  border-color: #163e71 transparent transparent transparent; }
+
+html.js fieldset.collapsed .fieldset-legend > a:before {
+  border-color: transparent transparent transparent #163e71;
+  border-width: 5px 6px;
+  margin-top: 7px;
+  margin-right: -2px; }
+
+ul.links.inline li:before {
+  display: none; }
+
+.search-form input[type="text"] {
+  width: auto; }
+
+.content-inner > #messages {
+  display: none !important; }
+
+#container {
+  height: 650px;
+  min-width: 310px;
+  max-width: 800px;
+  margin: 0 auto; }
+#container svg .highcharts-credits {
+  display: none !important; }
+
+#block-system-main {
+  margin-bottom: 0; }
+
+.item-list .sub-service-menu ul li {
+  padding-left: 0; }
+
+.item-list .sub-service-menu ul li:before {
+  display: none; }
+
+.search-result-service-name {
+  display: block;
+  width: 60%;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed black;
+  margin: 0 auto;
+  text-align: center;
+  color: black; }
+.search-result-service-name img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 90px; }
+.search-result-service-name span {
+  font-size: 42px;
+  text-transform: uppercase; }
+
+.search-additional-options {
+  display: flex; }
+
+.block-views-blockchild-terms-term--panel-pane-1 .term-children {
+  text-align: center; }
+.block-views-blockchild-terms-term--panel-pane-1 .term-child li {
+  display: inline-block;
+  text-align: center; }
+.block-views-blockchild-terms-term--panel-pane-1 .term-child li .term-icon {
+  display: block;
+  max-width: 90px;
+  margin: 0 auto; }
+.block-views-blockchild-terms-term--panel-pane-1 .term-child li .term-name {
+  display: block;
+  margin: 0 0; }
+.block-views-blockchild-terms-term--panel-pane-1 .term-child li:before {
+  display: none; }
+
+.field-content.content img {
+  display: none; }
+
+.pane-term-description .block-content {
+  text-align: center; }
+.pane-term-description .block-content img {
+  display: block;
+  max-width: 90px;
+  margin: 0 auto; }
+.pane-term-description .block-content a {
+  color: #163e71;
+  font-size: 18px;
+  line-height: 29px;
+  font-weight: bold; }
+
+.view-service-type .pager {
+  font-size: larger;
+  color: black; }
+.view-service-type .pager a {
+  color: #163e71; }
+.view-service-type .view-header {
+  border-top: 3px solid #163e71;
+  padding-top: 20px;
+  padding-left: 40px;
+  margin: 20px; }
+.view-service-type .view-header .result-wrapper {
+  width: 60%;
+  margin: 0 auto; }
+.view-service-type .view-content {
+  width: 60%;
+  margin: 0 auto; }
+.view-service-type .view-content article {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border-bottom: 3px dashed #163e71; }
+.view-service-type .view-content article header {
+  text-align: center;
+  margin-bottom: 20px; }
+.view-service-type .view-content article .node-title span {
+  font-size: 32px !important; }
+.view-service-type .view-content article .node-content {
+  padding-left: 16px; }
+.view-service-type .view-content article .node-readmore {
+  text-transform: uppercase; }
+
+.faq-table tr {
+  background-color: white; }
+.faq-table .links td {
+  padding-bottom: 40px; }
+.faq-table td {
+  text-align: center; }
+.faq-table img {
+  max-width: 60%; }
+
+.ui-autocomplete-field-group {
+  float: none !important;
+  padding-left: 15px;
+  bottom: -15px; }
+
+.ui-autocomplete li:before {
+  display: none !important; }
+.ui-autocomplete li {
+  z-index: 2; }
+.ui-autocomplete li a {
+  padding-left: 5px; }
+.ui-autocomplete li.ui-menu-item-first {
+  margin-top: 15px !important; }
+.ui-autocomplete div.all_results {
+  display: none; }
+
+/*# sourceMappingURL=global.styles.css.map */

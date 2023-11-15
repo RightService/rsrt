@@ -1,0 +1,22 @@
+uuid: e41de26f-4ae2-44ca-b59e-82996b0c2602
+langcode: en
+status: true
+dependencies:
+  theme:
+    - rightservice
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: rightservice_local_tasks
+theme: rightservice
+region: tabs
+weight: -7
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

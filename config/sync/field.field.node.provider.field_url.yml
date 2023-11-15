@@ -1,0 +1,28 @@
+uuid: eecfe905-8aa3-4de0-b54c-b4edfbffd150
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_url
+    - node.type.provider
+  module:
+    - link
+    - linkchecker
+third_party_settings:
+  linkchecker:
+    scan: true
+    extractor: link_link_extractor
+id: node.provider.field_url
+field_name: field_url
+entity_type: node
+bundle: provider
+label: URL
+description: 'Please enter the complete URL, including the "http://".'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

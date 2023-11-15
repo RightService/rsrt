@@ -1,0 +1,16 @@
+uuid: 455f72ab-5d4e-4840-8842-d13cd6064ec2
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - filebrowser
+_core:
+  default_config_hash: MFkRSLgKA0SnTapJ6TPj040eYkilEeX5lsrY9dDjoAA
+name: 'Directory listing'
+type: dir_listing
+description: 'A listing of files similar to how Apache lists files in a directory.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

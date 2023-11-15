@@ -1,0 +1,170 @@
+uuid: 9c8c89b4-37af-4cda-bec6-8e0214d4f318
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.library_dashboard
+    - views.view.assets
+    - views.view.new_county_users
+    - views.view.new_provider_profiles
+    - views.view.new_provider_user_registrations
+    - views.view.new_services
+    - views.view.recently_updated_providers_and_services
+    - views.view.rsrt_group_content_links
+    - views.view.statewide
+    - views.view.tutorials
+  content:
+    - 'block_content:basic:8d3b8b63-02b1-4ccb-8756-61448ca70f8c'
+    - 'block_content:basic:cacb9f2f-8a8e-4e2f-b15d-788145d89ebf'
+  module:
+    - block_content
+    - panels
+    - views
+id: library_dashboard-panels_variant-0
+label: Panels
+weight: 0
+variant: panels_variant
+variant_settings:
+  id: panels_variant
+  label: null
+  weight: 0
+  uuid: 05d26d1f-26ea-47c8-ae4b-ae6482599e10
+  blocks:
+    690df8bf-b3d7-4b11-9be8-b04936fbc70e:
+      id: 'views_block:tutorials-block_1'
+      label: ''
+      label_display: visible
+      provider: views
+      context_mapping: {  }
+      views_label: ''
+      items_per_page: none
+      region: first
+      weight: -3
+      uuid: 690df8bf-b3d7-4b11-9be8-b04936fbc70e
+    c2625a7d-2f33-4d38-998c-7fa22afc0f7e:
+      id: 'views_block:new_provider_user_registrations-block_1'
+      label: ''
+      label_display: visible
+      provider: views
+      context_mapping: {  }
+      views_label: ''
+      items_per_page: none
+      region: second
+      weight: -4
+      uuid: c2625a7d-2f33-4d38-998c-7fa22afc0f7e
+    d52b3bb1-59a2-46fe-8915-06c620ea4fab:
+      id: 'views_block:statewide-block_1'
+      label: ''
+      label_display: visible
+      provider: views
+      context_mapping: {  }
+      views_label: ''
+      items_per_page: none
+      region: second
+      weight: -3
+      uuid: d52b3bb1-59a2-46fe-8915-06c620ea4fab
+    5ea9a5a9-6f6f-41d9-b0bd-f37e9f4a650e:
+      id: 'views_block:new_provider_profiles-block_1'
+      label: ''
+      label_display: visible
+      provider: views
+      context_mapping: {  }
+      views_label: ''
+      items_per_page: none
+      region: bottom
+      weight: -4
+      uuid: 5ea9a5a9-6f6f-41d9-b0bd-f37e9f4a650e
+    5e28722c-c36d-4bef-a973-aacffaefeb59:
+      id: 'views_block:new_services-block_1'
+      label: ''
+      label_display: visible
+      provider: views
+      context_mapping: {  }
+      views_label: ''
+      items_per_page: none
+      region: bottom
+      weight: -3
+      uuid: 5e28722c-c36d-4bef-a973-aacffaefeb59
+    4d93e6f1-292a-4c3e-9cd4-52a1d3f22b0e:
+      id: 'views_block:new_county_users-block_1'
+      label: ''
+      label_display: visible
+      provider: views
+      context_mapping: {  }
+      views_label: ''
+      items_per_page: none
+      region: bottom
+      weight: -2
+      uuid: 4d93e6f1-292a-4c3e-9cd4-52a1d3f22b0e
+    4a33c182-3d83-4b53-ba04-7a3fb5e506ad:
+      id: 'views_block:rsrt_group_content_links-block_1'
+      label: 'Getting Started'
+      label_display: visible
+      provider: views
+      context_mapping: {  }
+      views_label: 'Getting Started'
+      items_per_page: none
+      region: first
+      weight: -5
+      uuid: 4a33c182-3d83-4b53-ba04-7a3fb5e506ad
+    3ecfa870-3aab-4d26-b279-0f57b28dfb23:
+      id: 'views_block:assets-block_2'
+      label: ''
+      label_display: visible
+      provider: views
+      context_mapping: {  }
+      views_label: ''
+      items_per_page: none
+      region: first
+      weight: -2
+      uuid: 3ecfa870-3aab-4d26-b279-0f57b28dfb23
+    57b8d075-0c1e-4179-a76e-705dd75827ce:
+      id: 'views_block:recently_updated_providers_and_services-block_1'
+      label: ''
+      label_display: visible
+      provider: views
+      context_mapping: {  }
+      views_label: ''
+      items_per_page: none
+      region: second
+      weight: -5
+      uuid: 57b8d075-0c1e-4179-a76e-705dd75827ce
+    01ab3886-d8a6-4d7c-bc72-a6ac1f79a92b:
+      id: 'block_content:cacb9f2f-8a8e-4e2f-b15d-788145d89ebf'
+      label: Welcome
+      label_display: visible
+      provider: block_content
+      status: true
+      info: ''
+      view_mode: full
+      context_mapping: {  }
+      region: top
+      weight: 0
+      uuid: 01ab3886-d8a6-4d7c-bc72-a6ac1f79a92b
+    400c83e0-3d10-4905-8a72-a6d505d83c38:
+      id: 'block_content:8d3b8b63-02b1-4ccb-8756-61448ca70f8c'
+      label: Communications
+      label_display: visible
+      provider: block_content
+      status: true
+      info: ''
+      view_mode: full
+      context_mapping: {  }
+      region: first
+      weight: -4
+      uuid: 400c83e0-3d10-4905-8a72-a6d505d83c38
+  page_title: 'Librarian Dashboard'
+  layout: layout_twocol
+  layout_settings: {  }
+  builder: standard
+  storage_type: page_manager
+  storage_id: library_dashboard-panels_variant-0
+page: library_dashboard
+selection_criteria: {  }
+selection_logic: and
+static_context:
+  county:
+    label: County
+    type: 'entity:taxonomy_term'
+    description: ''
+    value: 319e8aff-ab27-42a0-836b-79a95107370b

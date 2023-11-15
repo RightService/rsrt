@@ -1,0 +1,19 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Restablecer
+      fields:
+        type:
+          label: Type
+        message:
+          label: Mensaje
+        link:
+          label: Operaciones
+      filters:
+        type:
+          expose:
+            label: Type
+  page:
+    display_title: Página

@@ -1,0 +1,15 @@
+visibility_pages: 'node/*'
+enable: '1'
+title: 'Select county'
+body:
+  value: ''
+  format: php_code
+height: '220'
+width: '240'
+check_cookie: '1'
+expire: '0'
+delay: '0'
+close_delay: '0'
+cover_opacity: '70'
+style: black/popup.css
+visibility: '1'

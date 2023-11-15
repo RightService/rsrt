@@ -1,0 +1,14 @@
+uuid: b18cd3d0-ab5e-4213-9971-41164f7d92d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.temporary
+  module:
+    - user
+id: user_remove_role_action.temporary
+label: 'Remove the temporary role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: temporary

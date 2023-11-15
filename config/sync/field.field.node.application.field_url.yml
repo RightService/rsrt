@@ -1,0 +1,28 @@
+uuid: 0660463e-6ad3-496c-92c2-ef640d610060
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_url
+    - node.type.application
+  module:
+    - link
+    - linkchecker
+third_party_settings:
+  linkchecker:
+    scan: true
+    extractor: link_link_extractor
+id: node.application.field_url
+field_name: field_url
+entity_type: node
+bundle: application
+label: 'Apply Online URL'
+description: 'Please enter the complete URL, including the "http://".'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

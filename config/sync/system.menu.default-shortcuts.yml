@@ -1,0 +1,8 @@
+uuid: b8a5114d-ec3a-4af1-8d4d-61afc9b7317d
+langcode: en
+status: true
+dependencies: {  }
+id: default-shortcuts
+label: 'Default shortcuts'
+description: ''
+locked: false

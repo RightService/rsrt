@@ -1,0 +1,19 @@
+uuid: c218253d-5c9d-477f-8a5d-bb468f1d297d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contactname
+    - node.type.provider
+id: node.provider.field_contactname
+field_name: field_contactname
+entity_type: node
+bundle: provider
+label: 'Contact Name'
+description: 'Enter the contact name for this provider. This information is for library use only.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

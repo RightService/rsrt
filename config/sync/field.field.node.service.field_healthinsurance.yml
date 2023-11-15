@@ -1,0 +1,21 @@
+uuid: 6f48bf79-b263-4fd9-9b5a-93a4577d2572
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_healthinsurance
+    - node.type.service
+  module:
+    - options
+id: node.service.field_healthinsurance
+field_name: field_healthinsurance
+entity_type: node
+bundle: service
+label: 'Health Insurance'
+description: 'Further requirement or condition of service.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer
