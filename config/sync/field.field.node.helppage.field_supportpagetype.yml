@@ -1,0 +1,21 @@
+uuid: 8758b919-8987-4c3f-bc60-04b415b3a9cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_supportpagetype
+    - node.type.helppage
+  module:
+    - options
+id: node.helppage.field_supportpagetype
+field_name: field_supportpagetype
+entity_type: node
+bundle: helppage
+label: 'Support Page Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

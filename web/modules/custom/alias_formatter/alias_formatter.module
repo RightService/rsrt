@@ -1,0 +1,13 @@
+<?php
+
+ /**
+ * Implements hook_theme().
+ */
+function alias_formatter_theme() {
+    return array(
+      'alias_formatter' => array(
+        'variables' => array('url' => NULL, 'title' => 'N/A', 'langcode' => 'en'),
+        'template' => 'alias-formatter',
+      ),
+    );
+  }

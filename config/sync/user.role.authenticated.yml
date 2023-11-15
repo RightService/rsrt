@@ -1,0 +1,33 @@
+uuid: 79a9a39e-a90b-44a4-9581-c3e31ac328e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.filtered_html
+    - filter.format.webform_default
+  module:
+    - file
+    - filter
+    - google_analytics
+    - popup_message
+    - printable
+    - search
+    - search_autocomplete
+    - system
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'delete own files'
+  - 'display popup message'
+  - 'opt-in or out of google analytics tracking'
+  - 'search content'
+  - 'use advanced search'
+  - 'use search autocomplete'
+  - 'use text format filtered_html'
+  - 'use text format webform_default'
+  - 'view printer friendly versions'

@@ -1,0 +1,80 @@
+uuid: f8360be8-07ff-4b38-b393-2ebac64d6b0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.rsrt_admin_dashboard
+    - system.menu.default-shortcuts
+    - system.menu.rsrt-menu
+    - views.view.provider_stats
+    - views.view.unpublished_services
+  module:
+    - panels
+    - system
+    - views
+id: rsrt_admin_dashboard-panels_variant-0
+label: Panels
+weight: 0
+variant: panels_variant
+variant_settings:
+  id: panels_variant
+  label: null
+  weight: 0
+  uuid: 0634f16b-2017-4596-9e1b-f8a011e4a50b
+  blocks:
+    29a17d0d-bc1f-428b-919e-9136de4d0ddc:
+      id: 'system_menu_block:rsrt-menu'
+      label: RSRT
+      label_display: visible
+      provider: system
+      context_mapping: {  }
+      level: 1
+      depth: 0
+      expand_all_items: false
+      region: first
+      weight: 0
+      uuid: 29a17d0d-bc1f-428b-919e-9136de4d0ddc
+    81eb3fae-0755-4694-9669-7f202f633bf5:
+      id: 'system_menu_block:default-shortcuts'
+      label: 'Default shortcuts'
+      label_display: visible
+      provider: system
+      context_mapping: {  }
+      level: 1
+      depth: 0
+      expand_all_items: false
+      region: first
+      weight: -1
+      uuid: 81eb3fae-0755-4694-9669-7f202f633bf5
+    91503048-09db-46c5-aa52-5ee2aff84d42:
+      id: 'views_block:provider_stats-block_2'
+      label: 'Provider Stats'
+      label_display: visible
+      provider: views
+      context_mapping: {  }
+      views_label: 'Provider Stats'
+      items_per_page: none
+      region: bottom
+      weight: 0
+      uuid: 91503048-09db-46c5-aa52-5ee2aff84d42
+    3a63501a-8079-41b0-93f9-895aa3bb4912:
+      id: 'views_block:unpublished_services-block_1'
+      label: ''
+      label_display: visible
+      provider: views
+      context_mapping: {  }
+      views_label: ''
+      items_per_page: none
+      region: second
+      weight: -1
+      uuid: 3a63501a-8079-41b0-93f9-895aa3bb4912
+  page_title: ''
+  layout: layout_twocol
+  layout_settings: {  }
+  builder: standard
+  storage_type: page_manager
+  storage_id: rsrt_admin_dashboard-panels_variant-0
+page: rsrt_admin_dashboard
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

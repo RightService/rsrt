@@ -1,0 +1,21 @@
+uuid: 161fb58e-92f6-49a5-ba95-0e6c2de37ea3
+langcode: en
+status: true
+dependencies: {  }
+id: autocompletion_for_search_block
+label: 'Autocompletion for search block'
+selector: 'input#edit-search-api-fulltext.form-text'
+minChar: 3
+autoSubmit: true
+autoRedirect: true
+maxSuggestions: 10
+noResultLabel: 'No results found for [search-phrase]. Click to perform full search.'
+noResultValue: '[search-phrase]'
+noResultLink: ''
+moreResultsLabel: 'View all results for [search-phrase].'
+moreResultsValue: '[search-phrase]'
+moreResultsLink: ''
+source: 'autocompletion_callbacks_nodes::nodes_autocompletion_callback'
+theme: basic.css
+editable: true
+deletable: true

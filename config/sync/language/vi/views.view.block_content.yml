@@ -1,0 +1,11 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: 'Thiết lập lại'
+      fields:
+        operations:
+          label: 'Thao tác'
+  page_1:
+    display_title: Trang

@@ -1,0 +1,8 @@
+name: Custom authorisation block
+description: 'Wrapper for system authorisation'
+type: module
+core_version_requirement: ^9 || ^10
+package: Design Remastering
+dependencies:
+  - block
+  - twig_tweak:twig_tweak

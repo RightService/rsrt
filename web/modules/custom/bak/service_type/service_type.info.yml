@@ -1,0 +1,7 @@
+name: Service type routing 
+description: 'Service type routing module'
+type: module
+core: ^9 || ^10
+package: Custom routing
+dependencies:
+  - default_county:default_county

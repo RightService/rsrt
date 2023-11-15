@@ -1,0 +1,27 @@
+label: 'Nội dung'
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: 'Thiết lập lại'
+      fields:
+        status:
+          label: Status
+        operations:
+          label: 'Thao tác'
+      filters:
+        status:
+          expose:
+            label: Status
+        langcode:
+          expose:
+            label: 'Ngôn ngữ'
+      title: 'Nội dung'
+  page_1:
+    display_options:
+      menu:
+        title: 'Nội dung'
+      tab_options:
+        title: 'Nội dung'
+    display_title: Trang

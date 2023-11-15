@@ -1,0 +1,49 @@
+<?php
+
+use Drupal\Core\Url;
+use Drupal\node\Entity\Node;
+
+/**
+ * Adds county to service node read more links.
+ *
+ * @param array $links
+ * @param Drupal\node\Entity\Node $entity
+ * @param array $context
+ */
+function county_node_routing_node_links_alter(array &$links, Node $entity, array &$context) {
+  if ('teaser' === $context['view_mode'] &&
+    'service' === $entity->getType() &&
+    array_key_exists('node-readmore', $links['node']['#links'])
+  ) {
+    $county = Drupal::routeMatch()->getParameter('county') ?? get_ajax_county();
+    $url = 'internal:/county/' . $county . $links['node']['#links']['node-readmore']['url']->toString();
+    $links['node']['#links']['node-readmore']['url'] = Url::fromUri($url);
+  }
+}
+
+/**
+ * Adds county variable to node teaser view.
+ *
+ * @param array $variables
+ */
+function county_node_routing_preprocess_node(array &$variables) {
+  if ($variables['teaser'] && 'service' === $variables['node']->getType()) {
+    $variables['county'] = Drupal::routeMatch()->getParameter('county') ?? get_ajax_county();
+  }
+}
+
+/**
+ * Gets county from the request parameters while ajax.
+ *
+ * @return null|string
+ */
+function get_ajax_county() {
+  if ($_REQUEST['tid']) {
+    $terms = Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadByProperties(['tid' => $_REQUEST['tid']]);
+    if (!empty($terms)) {
+      return strtolower(reset($terms)->getName());
+    }
+  }
+
+  return NULL;
+}

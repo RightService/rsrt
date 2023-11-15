@@ -1,0 +1,20 @@
+uuid: c4460a9d-7e56-4243-9c95-b60ef1c8f9e6
+langcode: en
+status: true
+dependencies:
+  module:
+    - printable_fixed
+  theme:
+    - rightservice
+id: printablefixedblockcontent
+theme: rightservice
+region: content
+weight: -5
+provider: null
+plugin: 'printablefixedblock:node'
+settings:
+  id: 'printablefixedblock:node'
+  label: 'Printable Fixed Block (Content)'
+  label_display: '0'
+  provider: printable_fixed
+visibility: {  }

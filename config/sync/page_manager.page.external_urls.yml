@@ -1,0 +1,21 @@
+uuid: 3bc16dc4-da7c-4329-b512-00b12b15a8b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: external_urls
+label: 'External URLs'
+description: ''
+use_admin_theme: true
+path: /admin/reports/rsrt/externalurls
+access_logic: and
+access_conditions:
+  -
+    id: user_role
+    negate: false
+    context_mapping:
+      user: current_user
+    roles:
+      administrator: administrator
+parameters: {  }

@@ -1,0 +1,14 @@
+uuid: 6cc9ef9b-e6a2-4000-88b3-c6fd3d052cc8
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.temporary
+  module:
+    - user
+id: user_add_role_action.temporary
+label: 'Add the temporary role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: temporary

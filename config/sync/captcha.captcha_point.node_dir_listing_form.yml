@@ -1,0 +1,7 @@
+uuid: 237a3bb7-85de-430d-8a1f-7660418ade65
+langcode: en
+status: false
+dependencies: {  }
+formId: node_dir_listing_form
+captchaType: default
+label: node_dir_listing_form

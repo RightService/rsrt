@@ -1,0 +1,39 @@
+uuid: cd83fb72-ad67-4763-ab85-f4087443e818
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_provider
+    - node.type.provider
+    - node.type.service
+  module:
+    - entityconnect
+third_party_settings:
+  entityconnect:
+    buttons:
+      button_add: 0
+      button_edit: 0
+    icons:
+      icon_add: 0
+      icon_edit: 0
+id: node.service.field_provider
+field_name: field_provider
+entity_type: node
+bundle: service
+label: Provider
+description: 'The "Provider" organization for this service. <strong>Add new:</strong> click the "+" button. <strong>Edit the linked provider:</strong> click the pencil. <strong>Select an existing provider:</strong> begin typing the provider''s name in the text field.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      provider: provider
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

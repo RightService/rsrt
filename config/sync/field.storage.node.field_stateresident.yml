@@ -1,0 +1,30 @@
+uuid: f6f6a35c-136c-4629-b7bd-5bad8bafdf7c
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_stateresident
+field_name: field_stateresident
+entity_type: node
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: -1
+      label: 'Applicant must not be a state resident'
+    -
+      value: 0
+      label: "Doesn't matter"
+    -
+      value: 1
+      label: 'Applicant must be a state resident'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

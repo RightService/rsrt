@@ -1,0 +1,25 @@
+uuid: 9b565586-b0e4-4fa0-9293-5630b02b5337
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - rightservice
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: rightservice_branding
+theme: rightservice
+region: content
+weight: 2
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

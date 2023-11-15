@@ -1,0 +1,39 @@
+uuid: 6fa26a42-cf7f-48a8-bffa-d15675faebf0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reach
+    - node.type.provider
+    - taxonomy.vocabulary.reach
+  module:
+    - entityconnect
+third_party_settings:
+  entityconnect:
+    buttons:
+      button_add: 1
+      button_edit: 1
+    icons:
+      icon_add: 0
+      icon_edit: 0
+id: node.provider.field_reach
+field_name: field_reach
+entity_type: node
+bundle: provider
+label: Reach
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      reach: reach
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

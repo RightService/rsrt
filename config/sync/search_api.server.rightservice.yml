@@ -1,0 +1,18 @@
+uuid: 19e1024f-b7a5-4192-aa52-8394d7c9070b
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: rightservice
+name: rightservice
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 3
+  matching: words
+  phrase: disabled
+  autocomplete:
+    suggest_suffix: true
+    suggest_words: true

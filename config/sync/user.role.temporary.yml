@@ -1,0 +1,12 @@
+uuid: b02d3805-3c77-4308-8a61-ca2afc7371a5
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: temporary
+label: temporary
+weight: 38
+is_admin: null
+permissions:
+  - 'delete own files'

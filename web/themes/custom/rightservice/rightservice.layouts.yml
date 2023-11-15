@@ -1,0 +1,9 @@
+simple_2col:
+  label: Simple Two Column
+  category: Rightservice
+  template: templates/layouts/simple_2col
+  regions:
+    left:
+      label: Left
+    right:
+      label: Right

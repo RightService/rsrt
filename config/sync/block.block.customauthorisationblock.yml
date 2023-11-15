@@ -1,0 +1,28 @@
+uuid: e6ee2425-8659-4b99-8cc5-60c6a2f5940e
+langcode: en
+status: true
+dependencies:
+  module:
+    - auth_block
+    - user
+  theme:
+    - rightservice
+id: customauthorisationblock
+theme: rightservice
+region: sidebar_first
+weight: -7
+provider: null
+plugin: sidebar_block
+settings:
+  id: sidebar_block
+  label: 'Custom authorisation block'
+  label_display: '0'
+  provider: auth_block
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous

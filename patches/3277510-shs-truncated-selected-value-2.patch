@@ -1,0 +1,20 @@
+diff --git a/src/Plugin/Field/FieldWidget/OptionsShsWidget.php b/src/Plugin/Field/FieldWidget/OptionsShsWidget.php
+index 26a9b44..1cba9d8 100644
+--- a/src/Plugin/Field/FieldWidget/OptionsShsWidget.php
++++ b/src/Plugin/Field/FieldWidget/OptionsShsWidget.php
+@@ -179,8 +179,11 @@ public function formElement(FieldItemListInterface $items, $delta, array $elemen
+       $value = NestedArray::getValue($user_input, $field_parents);
+       $default_value = $value ?: $default_value;
+     }
+-    elseif (isset($user_input[$field_name])) {
+-      $default_value = $user_input[$field_name];
++    elseif (strpos($user_input[$field_name], ',') !== FALSE) {
++      $default_value = explode(",", $user_input[$field_name]);
++    }
++    elseif (strpos(trim($user_input[$field_name]), ' ') !== FALSE) {
++      $default_value = explode(" ", $user_input[$field_name]);
+     }
+     if (is_array($default_value) && (count($default_value) === 1) && empty($default_value[0])) {
+       // Sometimes we get a list of empty default values which equals to no
+
+

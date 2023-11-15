@@ -1,0 +1,275 @@
+uuid: 828b01d2-3ded-4327-b368-dd80f3f85f9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.provider.body
+    - field.field.node.provider.field_address
+    - field.field.node.provider.field_contactemail
+    - field.field.node.provider.field_contactname
+    - field.field.node.provider.field_contactphone
+    - field.field.node.provider.field_contacttitle
+    - field.field.node.provider.field_counties
+    - field.field.node.provider.field_location_phone
+    - field.field.node.provider.field_logo
+    - field.field.node.provider.field_notes
+    - field.field.node.provider.field_public_email
+    - field.field.node.provider.field_reach
+    - field.field.node.provider.field_url
+    - node.type.provider
+  module:
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: true
+    custom: false
+    allow: false
+    default: default
+    displays:
+      default:
+        id: panels_variant
+        label: Default
+        weight: 0
+        uuid: 1d6b374d-23b0-4cab-819a-85f0ab4c4165
+        blocks:
+          348d497a-30a7-4d18-bf46-204fd07edeea:
+            id: 'entity_field:node:body'
+            label: 'Summary of Services Provided'
+            label_display: '0'
+            provider: ctools_block
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            formatter:
+              type: text_default
+              weight: 0
+              region: content
+              label: hidden
+              settings: {  }
+              third_party_settings: {  }
+            region: content
+            weight: -1
+            uuid: 348d497a-30a7-4d18-bf46-204fd07edeea
+          48862915-fe05-4994-9a7e-c2c470427ce9:
+            id: 'entity_field:node:field_geofield'
+            label: Geofield
+            label_display: '0'
+            provider: ctools_block
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            formatter:
+              type: geofield_google_map
+              weight: 0
+              region: content
+              label: hidden
+              settings:
+                map_dimensions:
+                  width: 100%
+                  height: 300px
+                map_empty:
+                  empty_behaviour: '0'
+                  empty_message: 'No Geofield Value entered for this field'
+                map_center:
+                  lat: 42.0
+                  lon: 12.5
+                  center_force: false
+                  geocode: 'Find my location'
+                map_zoom_and_pan:
+                  zoom:
+                    initial: 15
+                    force: false
+                    min: 1
+                    max: 22
+                  gestureHandling: auto
+                  scrollwheel: true
+                  draggable: true
+                  map_reset: false
+                map_controls:
+                  zoom_control: true
+                  map_type_id: roadmap
+                  map_type_control: true
+                  map_type_control_options_type_ids:
+                    roadmap: roadmap
+                    satellite: satellite
+                    hybrid: hybrid
+                    terrain: '0'
+                  scale_control: false
+                  street_view_control: true
+                  fullscreen_control: false
+                  disable_default_ui: false
+                map_marker_and_infowindow:
+                  icon_image_mode: icon_file
+                  icon_file_wrapper:
+                    icon_file:
+                      fids: {  }
+                      upload_button: Upload
+                      remove_button: Remove
+                      upload: ''
+                    image_style: geofield_map_default_icon_style
+                  icon_image_path: ''
+                  infowindow_field: title
+                  view_mode: ''
+                  multivalue_split: false
+                  force_open: false
+                map_oms:
+                  map_oms_control: false
+                  map_oms_options: '{"markersWontMove":"true","markersWontHide":"true","basicFormatEvents":"true","nearbyDistance":3}'
+                map_additional_options: ''
+                custom_style_map:
+                  custom_style_name: ''
+                  custom_style_options: ''
+                  custom_style_control: false
+                  custom_style_default: false
+                map_markercluster:
+                  markercluster_additional_options: ''
+                  markercluster_control: false
+              third_party_settings: {  }
+            region: content
+            weight: 3
+            uuid: 48862915-fe05-4994-9a7e-c2c470427ce9
+          a02b53c8-ba2f-42c7-ad8e-a163a51cf74f:
+            id: 'entity_field:node:field_logo'
+            label: Logo
+            label_display: '0'
+            provider: ctools_block
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            formatter:
+              type: image
+              weight: 0
+              label: hidden
+              settings:
+                image_link: ''
+                image_style: ''
+              third_party_settings: {  }
+            region: content
+            weight: -3
+            uuid: a02b53c8-ba2f-42c7-ad8e-a163a51cf74f
+          0588c162-4be9-4999-830e-8c33c45af184:
+            id: 'entity_field:node:field_url'
+            label: URL
+            label_display: '0'
+            provider: ctools_block
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            formatter:
+              type: link
+              weight: 0
+              label: inline
+              settings:
+                trim_length: 80
+                url_only: false
+                url_plain: false
+                rel: '0'
+                target: _blank
+              third_party_settings: {  }
+            region: content
+            weight: -2
+            uuid: 0588c162-4be9-4999-830e-8c33c45af184
+          55307069-e181-4c30-b554-4fdcdd27f382:
+            id: 'entity_field:node:field_public_email'
+            label: 'Public Email'
+            label_display: '0'
+            provider: ctools_block
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            formatter:
+              type: basic_string
+              weight: 0
+              label: inline
+              settings: {  }
+              third_party_settings: {  }
+            region: content
+            weight: 0
+            uuid: 55307069-e181-4c30-b554-4fdcdd27f382
+          5b4ee7c6-143d-4b79-9de6-238ab990830b:
+            id: 'entity_field:node:field_address'
+            label: Address
+            label_display: '0'
+            provider: ctools_block
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            formatter:
+              type: address_default
+              weight: 0
+              label: above
+              settings: {  }
+              third_party_settings: {  }
+            region: content
+            weight: 1
+            uuid: 5b4ee7c6-143d-4b79-9de6-238ab990830b
+          1b5de107-6612-4d28-acc0-19cb3325960b:
+            id: 'entity_field:node:field_location_phone'
+            label: 'Provider Phone'
+            label_display: '0'
+            provider: ctools_block
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            formatter:
+              type: string
+              weight: 0
+              label: hidden
+              settings:
+                link_to_entity: false
+              third_party_settings: {  }
+            region: content
+            weight: 2
+            uuid: 1b5de107-6612-4d28-acc0-19cb3325960b
+          9d4b4ac8-c47b-415a-9c92-a0c125715bf2:
+            id: 'views_block:related_content-block_1'
+            label: ''
+            label_display: '0'
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+            region: content
+            weight: 4
+            uuid: 9d4b4ac8-c47b-415a-9c92-a0c125715bf2
+        page_title: null
+        layout: layout_onecol
+        layout_settings: {  }
+        builder: ipe
+        storage_type: panelizer_default
+        storage_id: 'node:provider:default:default'
+        static_context: {  }
+        pattern: panelizer
+id: node.provider.default
+targetEntityType: node
+bundle: provider
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_counties:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_address: true
+  field_contactemail: true
+  field_contactname: true
+  field_contactphone: true
+  field_contacttitle: true
+  field_location_phone: true
+  field_logo: true
+  field_notes: true
+  field_public_email: true
+  field_reach: true
+  field_url: true
+  search_api_excerpt: true

@@ -1,0 +1,21 @@
+uuid: cc905548-0fbd-4d9b-87d6-713c9275d677
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_usresident
+    - node.type.service
+  module:
+    - options
+id: node.service.field_usresident
+field_name: field_usresident
+entity_type: node
+bundle: service
+label: 'U.S. resident'
+description: 'Further requirement or condition of service.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

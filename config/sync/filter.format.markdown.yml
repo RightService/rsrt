@@ -1,0 +1,30 @@
+uuid: 32039ba8-f3ad-43da-bad8-ba93f79c95f0
+langcode: en
+status: true
+dependencies: {  }
+name: Markdown
+format: markdown
+weight: -9
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -49
+    settings:
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: false
+    weight: -46
+    settings: {  }
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: false
+    weight: -50
+    settings:
+      filter_url_length: 72

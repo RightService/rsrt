@@ -1,0 +1,5 @@
+services:
+  node_cache.overrider:
+    class: \Drupal\node_cache\ConfigOverrides
+    tags:
+      - {name: config.factory.override, priority: 5}

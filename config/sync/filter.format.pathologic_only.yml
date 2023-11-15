@@ -1,0 +1,8 @@
+uuid: d86d4ab8-9020-48bd-a28b-6405247095c4
+langcode: en
+status: true
+dependencies: {  }
+name: 'Pathologic Only'
+format: pathologic_only
+weight: 0
+filters: {  }

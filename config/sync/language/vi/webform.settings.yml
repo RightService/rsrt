@@ -1,0 +1,4 @@
+settings:
+  default_submit_button_label: 'Gửi đi'
+  default_reset_button_label: 'Thiết lập lại'
+  default_wizard_start_label: 'Khởi động'

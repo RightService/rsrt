@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Replaces county select popup content.
+ *
+ * @param array $data
+ */
+function default_county_popup_message_parameters_alter(array &$data) {
+  if (!Drupal::service('router.admin_context')->isAdminRoute()) {
+    $data['body'] = Drupal::service('default_county')->renderCountySelect();
+  }
+}
