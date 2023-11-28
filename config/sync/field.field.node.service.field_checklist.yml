@@ -1,0 +1,19 @@
+uuid: e5b62467-cfb7-4965-a43c-fd56263e2ccf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_checklist
+    - node.type.service
+id: node.service.field_checklist
+field_name: field_checklist
+entity_type: node
+bundle: service
+label: 'Checklist Items'
+description: 'Please enter the checklist items for this service. Checklist items are defined as things that the applicant must have in order to submit and application for this service.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

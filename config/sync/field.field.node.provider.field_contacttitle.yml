@@ -1,0 +1,21 @@
+uuid: 285c12b5-fe9f-4695-b396-d76bbc2ba2f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contacttitle
+    - node.type.provider
+  module:
+    - options
+id: node.provider.field_contacttitle
+field_name: field_contacttitle
+entity_type: node
+bundle: provider
+label: 'Contact Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

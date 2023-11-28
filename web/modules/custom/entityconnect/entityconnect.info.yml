@@ -1,0 +1,11 @@
+name: Entity Connect
+type: module
+description: Allows for referenced entity to be created and edited from the entity reference field
+core_version_requirement: ^9 || ^10
+package: Custom
+dependencies:
+  - drupal:field
+configure: entityconnect.administration_form
+
+# Information added by Drupal.org packaging script on 2020-08-17
+version: '8.x-2.0-rc1'

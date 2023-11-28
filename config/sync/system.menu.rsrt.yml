@@ -1,0 +1,8 @@
+uuid: 5e87454a-62da-49b4-9c65-28e24fef63e2
+langcode: en
+status: true
+dependencies: {  }
+id: rsrt
+label: 'RSRT Toolbar'
+description: 'The <em>Right Service</em> menu contains links for administrative tasks.'
+locked: false

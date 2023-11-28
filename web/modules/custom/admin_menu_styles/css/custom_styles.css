@@ -1,0 +1,21 @@
+ul.toolbar-menu li.menu-item{
+    position: relative;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 0;
+}
+
+.menu-item--expanded ul.toolbar-menu li.menu-item{
+    width: 100%;
+}
+
+a.toolbar-icon-link-toolbar-menu[title="Help Pages"]:before {
+    background-image: url(../icons/787878/questionmark-disc.svg);
+}
+a.toolbar-icon-link-toolbar-menu[title="Library Dashboard"]:before {
+    background-image: url(../icons/787878/puzzlepiece.svg);
+}
+a.toolbar-icon-link-toolbar-menu[title="Admin Dashboard"]:before {
+    background-image: url(../icons/787878/person.svg);
+}
+

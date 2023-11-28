@@ -1,0 +1,186 @@
+.container {
+  margin: 0 auto;
+}
+
+.region-sidebar-first .form-item .description {
+  display: none;
+}
+
+input {
+  color: initial;
+}
+
+.block-region-content {
+  font-family: "Trebuchet MS", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+#breadcrumb {
+  font-size: 14px;
+}
+
+#block-rightservice-breadcrumbs {
+  margin: 0 !important;
+}
+
+.location-details summary {
+  color: #163e71;
+  font: 700 20px "Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  padding-left: 6px;
+}
+
+.simple-2col {
+  display: flex;
+}
+
+.left {
+  width: 30%;
+}
+
+.right {
+  width: 70%;
+}
+
+.field--name-field-application h2 span,
+.field--name-field-provider h2 span {
+  font-size: 37px;
+}
+
+.layout__region.layout__region--first {
+  max-width: 50%;
+}
+
+.layout__region.layout__region--second {
+  max-width: 50%;
+}
+
+.layout--twocol .dashboard {
+  box-shadow: 4px 4px 4px #B0B0B0;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 10px;
+}
+
+.layout--twocol .dashboard h2 {
+  color: black;
+}
+
+.layout--twocol .dashboard label {
+  color: black;
+}
+
+.block-views-blockrecently-updated-providers-and-services-block-1.dashboard .form-select {
+  display: block;
+}
+
+.block-views-blockrecently-updated-providers-and-services-block-1.dashboard .form-actions {
+  display: inline-block;
+}
+
+.block-views-blockrecently-updated-providers-and-services-block-1.dashboard .form-actions input.form-submit {
+  margin-top: 24px;
+}
+
+.block-views-blocknew-provider-user-registrations-block-1.dashboard .views-field-mail {
+  max-width: 150px;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.path-frontpage .form-item-field-counties,
+.path-frontpage .form-item-search-api-fulltext label,
+.path-frontpage #views-exposed-form-search-page-1 details {
+  display: none;
+}
+
+.path-frontpage #edit-search-api-fulltext {
+  width: 100%;
+  background: none;
+}
+
+.path-frontpage #block-exposedformsearchpage-1 {
+  margin-bottom: 0 !important;
+}
+
+#views-exposed-form-search-page-1 .form-item {
+  float: none;
+}
+
+.form-item-field-counties select {
+  display: block;
+}
+
+#block-exposedformsearchpage-1 details > summary {
+  color: #163e71;
+  font: 700 20px "Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+#block-exposedformsearchpage-1 details > .details-wrapper {
+  height: 250px;
+}
+
+.form-item-search-api-fulltext-1,
+.form-item-search-api-fulltext-2,
+.form-item-search-api-fulltext-3 {
+  display: block;
+  float: left !important;
+  clear: both;
+}
+
+#block-exposedformsearchpage-1 .form-type-textfield {
+  width: 450px;
+  margin-right: 20px;
+}
+
+fieldset#edit-type--wrapper {
+  color: #163e71;
+}
+
+.view-search .view-content {
+  padding-left: 40px;
+}
+
+.view-search .views-field-search-api-excerpt {
+  margin-bottom: 1.5em;
+}
+
+#sidebar-first aside {
+  height: 100%;
+}
+
+#sidebar-first .region-sidebar-first {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+#block-copyright {
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+}
+
+.u1st #u1stLogoContainer {
+  right: 2px;
+  left: inherit !important;
+}
+
+.u1st .u1st-menu-wrapper.u1st_position {
+  left: inherit !important;
+  right: 3px;
+}
+
+.u1st_skipLink {
+  left: inherit !important;
+  right: 140px;
+}
+
+#views-exposed-form-service-type-block-1 .form-item-tid,
+#views-exposed-form-service-type-block-1 .form-actions {
+  display: inline-block;
+}
+
+#popup-message-window h1.popup-message-title {
+  margin: 0 !important;
+}

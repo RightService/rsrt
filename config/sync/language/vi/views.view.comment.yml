@@ -1,0 +1,22 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: 'Thiết lập lại'
+      fields:
+        operations:
+          label: 'Thao tác'
+      filters:
+        langcode:
+          expose:
+            label: 'Ngôn ngữ'
+  page_unapproved:
+    display_options:
+      filters:
+        langcode:
+          expose:
+            label: 'Ngôn ngữ'
+      fields:
+        operations:
+          label: 'Thao tác'

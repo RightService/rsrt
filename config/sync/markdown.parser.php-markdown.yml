@@ -1,0 +1,21 @@
+dependencies:
+  module:
+    - markdown
+id: php-markdown
+enabled: true
+weight: 31
+render_strategy:
+  type: filter_output
+  custom_allowed_html: ''
+  plugins:
+    php-markdown: true
+settings:
+  enhanced_ordered_list: false
+  hard_wrap: false
+  no_entities: false
+  no_markup: false
+  predef_titles:
+    - ''
+  predef_urls:
+    - ''
+  tab_width: 4

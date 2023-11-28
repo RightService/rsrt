@@ -1,0 +1,21 @@
+uuid: b728cb60-7e7f-4607-a5ef-45aec25c20c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.service_type
+  module:
+    - context
+id: service_type-context_block_page-0
+label: sample
+weight: 0
+variant: context_block_page
+variant_settings:
+  id: context_block_page
+  label: sample
+  weight: 0
+  uuid: 015176cb-61e6-4490-9561-211608713512
+page: service_type
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

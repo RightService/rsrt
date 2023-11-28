@@ -1,0 +1,12 @@
+uuid: 1dcff030-cce7-4d11-a627-5308dc8becc0
+langcode: en
+status: true
+dependencies: {  }
+id: service_type
+label: 'Service Type'
+description: ''
+use_admin_theme: false
+path: /service-type/%county/services
+access_logic: and
+access_conditions: {  }
+parameters: {  }

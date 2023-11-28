@@ -1,0 +1,39 @@
+uuid: b1cec0c4-1d99-4554-b014-4064648feaf9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.application.body
+    - field.field.node.application.field_counties
+    - field.field.node.application.field_reach
+    - field.field.node.application.field_url
+    - field.field.node.application.field_url2
+    - node.type.application
+  module:
+    - text
+    - user
+id: node.application.teaser
+targetEntityType: node
+bundle: application
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_counties: true
+  field_reach: true
+  field_url: true
+  field_url2: true
+  search_api_excerpt: true

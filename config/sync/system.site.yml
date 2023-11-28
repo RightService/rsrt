@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+langcode: en
+uuid: cc68bf35-6f45-4e34-9b14-7cbf1f5e9e6f
+name: 'The Right Service at the Right Time'
+mail: rightservice@ocls.info
+slogan: ''
+page:
+  403: /
+  404: /
+  front: /home
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: ''

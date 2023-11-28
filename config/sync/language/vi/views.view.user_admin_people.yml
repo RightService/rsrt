@@ -1,0 +1,17 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: 'Thiết lập lại'
+      fields:
+        status:
+          label: Status
+        operations:
+          label: 'Thao tác'
+      filters:
+        status:
+          group_info:
+            label: Status
+  page_1:
+    display_title: Trang

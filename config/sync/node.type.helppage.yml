@@ -1,0 +1,16 @@
+uuid: a5c4d16e-a130-4e44-9665-3d06e58962c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    parent: 'main-menu:0:'
+name: 'Help Page'
+type: helppage
+description: 'Use this content type to create site documentation.'
+help: 'Fill out the fields below to create a new documentation or tutorial page for this web site.'
+new_revision: false
+preview_mode: 1
+display_submitted: false

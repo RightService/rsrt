@@ -1,0 +1,20 @@
+uuid: ae9c453d-3c6c-4414-9493-2c571e941169
+langcode: en
+status: true
+dependencies:
+  theme:
+    - rightservice
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: rightservice_page_title
+theme: rightservice
+region: header
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

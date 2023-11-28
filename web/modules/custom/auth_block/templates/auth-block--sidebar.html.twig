@@ -1,0 +1,19 @@
+<div class="login-anons">
+  <div class="block-inner clearfix">
+    <div class="login-anons_wrapper">
+      <h2>{{ title }}</h2>
+      <p>{{ description }}</p>
+      <a href="/register/provider" title="Create a new user account." class="btn">Service Provider</a>
+      <a href="/library" title="Create a new user account." class="btn">Library</a>
+      <a href="/provider" class="btn form-showing" title="Log in">Login</a>
+    </div>
+    {{ drupal_form('Drupal\\user\\Form\\UserLoginForm') }}
+    <div id="user-login-form-additional" class="item-list">
+      <ul>
+        <li class="odd last">
+          <a href="/user/password" title="Request new password via e-mail.">Request new password</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

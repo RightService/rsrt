@@ -1,0 +1,3 @@
+services:
+  default_county:
+    class: Drupal\default_county\Services\DefaultCounty

@@ -1,0 +1,8 @@
+uuid: 144802e2-f590-4047-98b4-69c5712e111f
+langcode: en
+status: true
+dependencies: {  }
+id: menu-librarian
+label: Librarian
+description: ''
+locked: false

@@ -1,0 +1,30 @@
+uuid: bd98559f-b27b-4736-8d9c-82fd2cc23714
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_over18
+field_name: field_over18
+entity_type: node
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: -1
+      label: 'Applicant must not be over 18 years old'
+    -
+      value: 0
+      label: "Doesn't matter"
+    -
+      value: 1
+      label: 'Applicant must be over 18 years old'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

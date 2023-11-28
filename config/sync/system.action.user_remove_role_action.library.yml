@@ -1,0 +1,14 @@
+uuid: c66aa120-5882-4146-ac9b-88efe604aab5
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.library
+  module:
+    - user
+id: user_remove_role_action.library
+label: 'Remove the library role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: library

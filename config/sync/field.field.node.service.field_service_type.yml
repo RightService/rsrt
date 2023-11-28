@@ -1,0 +1,39 @@
+uuid: bc43a439-5993-438e-b51e-52b550048664
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_service_type
+    - node.type.service
+    - taxonomy.vocabulary.service_type
+  module:
+    - entityconnect
+third_party_settings:
+  entityconnect:
+    buttons:
+      button_add: 1
+      button_edit: 1
+    icons:
+      icon_add: 0
+      icon_edit: 0
+id: node.service.field_service_type
+field_name: field_service_type
+entity_type: node
+bundle: service
+label: 'Service Type'
+description: 'Remember to click the "Add" button for each selection. You may choose multiple categories.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      service_type: service_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

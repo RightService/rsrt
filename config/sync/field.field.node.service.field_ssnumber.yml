@@ -1,0 +1,21 @@
+uuid: 51d39c81-c63e-4d49-98d9-fbc1662bb74d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ssnumber
+    - node.type.service
+  module:
+    - options
+id: node.service.field_ssnumber
+field_name: field_ssnumber
+entity_type: node
+bundle: service
+label: 'Social Security number'
+description: 'Further requirement or condition of service.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

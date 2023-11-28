@@ -1,0 +1,25 @@
+uuid: 8123d73a-71e0-4f3c-af72-e242b8225933
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2df5e8ed-8cbd-4863-9612-5b7618126905'
+  module:
+    - block_content
+  theme:
+    - rightservice
+id: rightservicerighttimelogo
+theme: rightservice
+region: sidebar_first
+weight: -10
+provider: null
+plugin: 'block_content:2df5e8ed-8cbd-4863-9612-5b7618126905'
+settings:
+  id: 'block_content:2df5e8ed-8cbd-4863-9612-5b7618126905'
+  label: 'Right Service Right Time logo'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

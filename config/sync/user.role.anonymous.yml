@@ -1,0 +1,27 @@
+uuid: 0f710ad8-f56a-474b-b9bd-ffa132ed9e6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.filtered_html
+  module:
+    - filter
+    - popup_message
+    - printable
+    - search
+    - search_autocomplete
+    - system
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'display popup message'
+  - 'search content'
+  - 'use advanced search'
+  - 'use search autocomplete'
+  - 'use text format filtered_html'
+  - 'view printer friendly versions'

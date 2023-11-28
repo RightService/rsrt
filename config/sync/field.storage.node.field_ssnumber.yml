@@ -1,0 +1,30 @@
+uuid: 30f855cd-16f4-41bb-abf5-c0df4e38dc0a
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_ssnumber
+field_name: field_ssnumber
+entity_type: node
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: -1
+      label: 'Application must not have a social security number'
+    -
+      value: 0
+      label: "Doesn't matter"
+    -
+      value: 1
+      label: 'Applicant must have a social security number'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

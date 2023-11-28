@@ -1,0 +1,41 @@
+uuid: 8a528d1b-36a6-4ef2-b7f2-f910f1fefe01
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.filtered_html
+    - filter.format.markdown
+    - node.type.application
+    - node.type.provider
+    - node.type.service
+  module:
+    - entityconnect
+    - file
+    - filter
+    - node
+    - system
+    - toolbar
+    - toolbar_menu
+id: provider
+label: provider
+weight: 35
+is_admin: null
+permissions:
+  - 'access toolbar'
+  - 'create application content'
+  - 'create provider content'
+  - 'create service content'
+  - 'delete own application content'
+  - 'delete own files'
+  - 'delete own provider content'
+  - 'delete own service content'
+  - 'edit own application content'
+  - 'edit own provider content'
+  - 'edit own service content'
+  - 'entityconnect add button'
+  - 'entityconnect edit button'
+  - 'use text format filtered_html'
+  - 'use text format markdown'
+  - 'view own unpublished content'
+  - 'view rsrt in toolbar'
+  - 'view the administration theme'

@@ -1,0 +1,66 @@
+uuid: eeb7cfbc-3e63-42e2-b8ec-b566567791c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.filtered_html
+    - filter.format.markdown
+    - node.type.application
+    - node.type.helppage
+    - node.type.page
+    - node.type.provider
+    - node.type.service
+    - node.type.story
+    - node.type.webform
+  module:
+    - entityconnect
+    - file
+    - filter
+    - node
+    - system
+id: content_editor
+label: 'content editor'
+weight: 34
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access site reports'
+  - 'administer entityconnect'
+  - 'create application content'
+  - 'create helppage content'
+  - 'create page content'
+  - 'create provider content'
+  - 'create service content'
+  - 'create story content'
+  - 'create webform content'
+  - 'delete any application content'
+  - 'delete any page content'
+  - 'delete any provider content'
+  - 'delete any service content'
+  - 'delete any story content'
+  - 'delete own application content'
+  - 'delete own files'
+  - 'delete own helppage content'
+  - 'delete own page content'
+  - 'delete own provider content'
+  - 'delete own service content'
+  - 'delete own story content'
+  - 'edit any application content'
+  - 'edit any helppage content'
+  - 'edit any page content'
+  - 'edit any provider content'
+  - 'edit any service content'
+  - 'edit any webform content'
+  - 'edit own application content'
+  - 'edit own helppage content'
+  - 'edit own page content'
+  - 'edit own provider content'
+  - 'edit own service content'
+  - 'edit own story content'
+  - 'edit own webform content'
+  - 'entityconnect add button'
+  - 'entityconnect edit button'
+  - 'use text format filtered_html'
+  - 'use text format markdown'
+  - 'view own unpublished content'
+  - 'view the administration theme'

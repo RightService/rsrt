@@ -1,0 +1,21 @@
+uuid: b8051db0-9d7e-4379-a04a-77ef402b5d31
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_stateresident
+    - node.type.service
+  module:
+    - options
+id: node.service.field_stateresident
+field_name: field_stateresident
+entity_type: node
+bundle: service
+label: 'State resident'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer
