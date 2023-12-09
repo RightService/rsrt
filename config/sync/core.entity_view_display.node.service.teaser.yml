@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.service.field_checklist
     - field.field.node.service.field_counties
     - field.field.node.service.field_english
+    - field.field.node.service.field_geofield
     - field.field.node.service.field_healthinsurance
     - field.field.node.service.field_location_phone
     - field.field.node.service.field_over18
@@ -49,6 +50,7 @@ hidden:
   field_checklist: true
   field_counties: true
   field_english: true
+  field_geofield: true
   field_healthinsurance: true
   field_location_phone: true
   field_over18: true
