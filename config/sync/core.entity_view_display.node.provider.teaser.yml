@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.provider.field_contactphone
     - field.field.node.provider.field_contacttitle
     - field.field.node.provider.field_counties
+    - field.field.node.provider.field_geofield
     - field.field.node.provider.field_location_phone
     - field.field.node.provider.field_logo
     - field.field.node.provider.field_notes
@@ -46,6 +47,7 @@ hidden:
   field_contactphone: true
   field_contacttitle: true
   field_counties: true
+  field_geofield: true
   field_location_phone: true
   field_logo: true
   field_notes: true

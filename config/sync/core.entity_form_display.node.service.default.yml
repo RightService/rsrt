@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.service.field_checklist
     - field.field.node.service.field_counties
     - field.field.node.service.field_english
+    - field.field.node.service.field_geofield
     - field.field.node.service.field_healthinsurance
     - field.field.node.service.field_location_phone
     - field.field.node.service.field_over18
@@ -25,6 +26,7 @@ dependencies:
   module:
     - address
     - field_group
+    - geofield
     - path
     - shs
     - text
@@ -114,6 +116,13 @@ content:
     weight: 13
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_geofield:
+    type: geofield_latlon
+    weight: 22
+    region: content
+    settings:
+      html5_geolocation: false
     third_party_settings: {  }
   field_location_phone:
     type: string_textfield

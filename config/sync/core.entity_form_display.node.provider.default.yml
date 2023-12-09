@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.provider.field_contactphone
     - field.field.node.provider.field_contacttitle
     - field.field.node.provider.field_counties
+    - field.field.node.provider.field_geofield
     - field.field.node.provider.field_location_phone
     - field.field.node.provider.field_logo
     - field.field.node.provider.field_notes
@@ -235,4 +236,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_geofield: true

@@ -1,0 +1,38 @@
+uuid: 9f357289-a293-4379-9775-d60c91061b1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_geofield
+    - node.type.provider
+  module:
+    - geocoder_field
+    - geofield
+third_party_settings:
+  geocoder_field:
+    method: source
+    weight: 0
+    disabled: false
+    hidden: true
+    providers:
+      - googlemaps
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: false
+      log: true
+    geocode_field: field_address
+    reverse_geocode_field: ''
+id: node.provider.field_geofield
+field_name: field_geofield
+entity_type: node
+bundle: provider
+label: Geofield
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geofield

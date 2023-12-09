@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.service.field_checklist
     - field.field.node.service.field_counties
     - field.field.node.service.field_english
+    - field.field.node.service.field_geofield
     - field.field.node.service.field_healthinsurance
     - field.field.node.service.field_location_phone
     - field.field.node.service.field_over18
@@ -23,6 +24,7 @@ dependencies:
     - field.field.node.service.panelizer
     - node.type.service
   module:
+    - geofield
     - panelizer
     - text
     - user
@@ -76,34 +78,39 @@ third_party_settings:
                   empty_behaviour: '0'
                   empty_message: 'No Geofield Value entered for this field'
                 map_center:
-                  lat: 42.0
-                  lon: 12.5
-                  center_force: false
+                  lat: '42'
+                  lon: '12.5'
+                  center_force: 0
                   geocode: 'Find my location'
                 map_zoom_and_pan:
                   zoom:
-                    initial: 15
-                    force: false
-                    min: 1
-                    max: 22
+                    initial: '15'
+                    force: 0
+                    min: '1'
+                    max: '22'
                   gestureHandling: auto
-                  scrollwheel: true
-                  draggable: true
-                  map_reset: false
+                  scrollwheel: '1'
+                  draggable: '1'
+                  map_reset: 0
                 map_controls:
-                  zoom_control: false
+                  disable_default_ui: 0
+                  zoom_control: 0
                   map_type_id: roadmap
-                  map_type_control: true
+                  map_type_control: 1
                   map_type_control_options_type_ids:
                     roadmap: roadmap
                     satellite: satellite
                     hybrid: hybrid
-                    terrain: '0'
-                  scale_control: false
-                  street_view_control: true
-                  fullscreen_control: false
-                  disable_default_ui: false
+                    terrain: 0
+                  scale_control: 0
+                  street_view_control: 1
+                  fullscreen_control: 0
                 map_marker_and_infowindow:
+                  icon_image_path: ''
+                  infowindow_field: title
+                  multivalue_split: 0
+                  view_mode: ''
+                  force_open: 0
                   icon_image_mode: icon_file
                   icon_file_wrapper:
                     icon_file:
@@ -112,23 +119,18 @@ third_party_settings:
                       remove_button: Remove
                       upload: ''
                     image_style: geofield_map_default_icon_style
-                  icon_image_path: ''
-                  infowindow_field: title
-                  view_mode: ''
-                  multivalue_split: false
-                  force_open: false
-                map_oms:
-                  map_oms_control: false
-                  map_oms_options: '{"markersWontMove":"true","markersWontHide":"true","basicFormatEvents":"true","nearbyDistance":3}'
                 map_additional_options: ''
+                map_oms:
+                  map_oms_control: 0
+                  map_oms_options: '{"markersWontMove":"true","markersWontHide":"true","basicFormatEvents":"true","nearbyDistance":3}'
                 custom_style_map:
+                  custom_style_control: 0
                   custom_style_name: ''
                   custom_style_options: ''
-                  custom_style_control: false
-                  custom_style_default: false
+                  custom_style_default: 0
                 map_markercluster:
+                  markercluster_control: 0
                   markercluster_additional_options: ''
-                  markercluster_control: false
               third_party_settings: {  }
             region: right
             weight: 0
@@ -276,6 +278,15 @@ content:
       link: true
     third_party_settings: {  }
     weight: 103
+    region: content
+  field_geofield:
+    type: geofield_default
+    label: above
+    settings:
+      output_format: wkt
+      output_escape: true
+    third_party_settings: {  }
+    weight: 102
     region: content
   links:
     settings: {  }
