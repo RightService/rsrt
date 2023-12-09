@@ -1,0 +1,11 @@
+uuid: 4a8b0543-e308-4f42-b7cc-bc8a77b4bee1
+langcode: en
+status: true
+dependencies:
+  module:
+    - geocoder_geofield
+id: gpxfile
+label: 'GPX File'
+plugin: gpxfile
+configuration:
+  apiKey: null
