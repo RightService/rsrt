@@ -3,7 +3,6 @@ type: theme
 core_version_requirement: ^9 || ^10
 libraries:
   - rightservice/global-styling
-  - rightservice/header-scripts
   - rightservice/global-scripts
 base theme: classy
 regions:
